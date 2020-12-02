@@ -18,6 +18,7 @@ class CreatePhoneNumsTable extends Migration
             $table->bigInteger('phone_id')->unsigned();
             $table->string('phone_num');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
