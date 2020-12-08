@@ -18,7 +18,7 @@ class CreatePhoneNumsTable extends Migration
             $table->bigInteger('phone_id');
             $table->string('phone_num');
             $table->softDeletes();
-            $table->timestamps();           
+            $table->timestamps();
         });
     }
 
