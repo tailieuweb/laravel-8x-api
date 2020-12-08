@@ -13,7 +13,7 @@ class CreateSessionsTable extends BaseMigration
      */
     public function up()
     {
-        Schema::create($this->prefix_table .'sessions', function (Blueprint $table) {
+        Schema::create('sessions', function (Blueprint $table) {
             $table->string('id', 100)->primary();
             $table->foreignId('user_id')->nullable()->index();
             $table->string('ip_address', 45)->nullable();
@@ -32,6 +32,6 @@ class CreateSessionsTable extends BaseMigration
      */
     public function down()
     {
-        Schema::dropIfExists($this->prefix_table . 'sessions');
+        Schema::dropIfExists('sessions');
     }
 }
