@@ -1,10 +1,10 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
+use App\BaseMigration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateGroupsHasPermissionsTable extends Migration
+class CreateGroupsHasPermissionsTable extends BaseMigration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,12 @@ class CreateGroupsHasPermissionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('groups_has_permissions', function (Blueprint $table) {
+        Schema::create($this->prefix_table .'groups_has_permissions', function (Blueprint $table) {
             $table->id();
             $table->string('group_id');
             $table->string('permission_id');
-            $table->string('status');
-            $table->softDeletes();
-            $table->timestamps();
+            //Set common columns
+            $this->setCommonColumns($table);
         });
     }
 
@@ -30,6 +29,6 @@ class CreateGroupsHasPermissionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('groups_has_permissions');
+        Schema::dropIfExists($this->prefix_table . 'groups_has_permissions');
     }
 }

@@ -1,10 +1,10 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
+use App\BaseMigration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateImagesTable extends Migration
+class CreateImagesTable extends BaseMigration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreateImagesTable extends Migration
      */
     public function up()
     {
-        Schema::create('images', function (Blueprint $table) {
+        Schema::create($this->prefix_table .'images', function (Blueprint $table) {
             $table->id();
             $table->string('imageable_id');
             $table->string('imageable_type');
-            $table->softDeletes();
-            $table->timestamps();
+            //Set common columns
+            $this->setCommonColumns($table);
         });
     }
 
@@ -29,6 +29,6 @@ class CreateImagesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('images');
+        Schema::dropIfExists($this->prefix_table . 'images');
     }
 }

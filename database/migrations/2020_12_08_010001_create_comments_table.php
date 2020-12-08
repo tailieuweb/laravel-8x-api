@@ -1,10 +1,10 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
+use App\BaseMigration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCommentsTable extends Migration
+class CreateCommentsTable extends BaseMigration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,14 @@ class CreateCommentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('comments', function (Blueprint $table) {
+        Schema::create($this->prefix_table .'comments', function (Blueprint $table) {
             $table->id();
             $table->string('content');
             $table->integer('vote')->unsigned();
             $table->integer('commentable_id')->unsigned();
             $table->string('commentable_type');
-            $table->softDeletes();
-            $table->timestamps();
+            //Set common columns
+            $this->setCommonColumns($table);
         });
     }
 
@@ -31,6 +31,6 @@ class CreateCommentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('comments');
+        Schema::dropIfExists($this->prefix_table . 'comments');
     }
 }

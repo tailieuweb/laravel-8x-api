@@ -1,10 +1,10 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
+use App\BaseMigration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateVideosTable extends Migration
+class CreateVideosTable extends BaseMigration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreateVideosTable extends Migration
      */
     public function up()
     {
-        Schema::create('videos', function (Blueprint $table) {
+        Schema::create($this->prefix_table .'videos', function (Blueprint $table) {
             $table->id();
             $table->string('title');
             $table->string('url');
-            $table->timestamps();
-            $table->softDeletes();
+            //Set common columns
+            $this->setCommonColumns($table);
         });
     }
 
@@ -29,6 +29,6 @@ class CreateVideosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('videos');
+        Schema::dropIfExists($this->prefix_table . 'videos');
     }
 }

@@ -1,10 +1,10 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
+use App\BaseMigration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCountriesTable extends Migration
+class CreateCountriesTable extends BaseMigration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateCountriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('countries', function (Blueprint $table) {
+        Schema::create($this->prefix_table .'countries', function (Blueprint $table) {
             $table->id();
             $table->string('country_name');
-            $table->softDeletes();
-            $table->timestamps();
+            //Set common columns
+            $this->setCommonColumns($table);
         });
     }
 
@@ -28,6 +28,6 @@ class CreateCountriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('countries');
+        Schema::dropIfExists($this->prefix_table . 'countries');
     }
 }

@@ -1,10 +1,10 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
+use App\BaseMigration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePermissionsTable extends Migration
+class CreatePermissionsTable extends BaseMigration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,12 @@ class CreatePermissionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('permissions', function (Blueprint $table) {
+        Schema::create($this->prefix_table .'permissions', function (Blueprint $table) {
             $table->id();
             $table->string('permission_name');
             $table->string('permission_type');
-            $table->string('status');
-            $table->softDeletes();
-            $table->timestamps();
+            //Set common columns
+            $this->setCommonColumns($table);
         });
     }
 
@@ -30,6 +29,6 @@ class CreatePermissionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('permissions');
+        Schema::dropIfExists($this->prefix_table . 'permissions');
     }
 }

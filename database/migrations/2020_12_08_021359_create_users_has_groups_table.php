@@ -1,10 +1,10 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
+use App\BaseMigration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUsersHasGroupsTable extends Migration
+class CreateUsersHasGroupsTable extends BaseMigration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,12 @@ class CreateUsersHasGroupsTable extends Migration
      */
     public function up()
     {
-        Schema::create('users_has_groups', function (Blueprint $table) {
+        Schema::create($this->prefix_table .'users_has_groups', function (Blueprint $table) {
             $table->id();
             $table->string('user_id');
             $table->string('group_id');
-            $table->string('status');
-            $table->softDeletes();
-            $table->timestamps();
+            //Set common columns
+            $this->setCommonColumns($table);
         });
     }
 
@@ -30,6 +29,6 @@ class CreateUsersHasGroupsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users_has_groups');
+        Schema::dropIfExists($this->prefix_table . 'users_has_groups');
     }
 }

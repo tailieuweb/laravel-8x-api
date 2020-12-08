@@ -1,10 +1,10 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
+use App\BaseMigration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSessionsTable extends Migration
+class CreateSessionsTable extends BaseMigration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,15 @@ class CreateSessionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('sessions', function (Blueprint $table) {
+        Schema::create($this->prefix_table .'sessions', function (Blueprint $table) {
             $table->string('id', 100)->primary();
             $table->foreignId('user_id')->nullable()->index();
             $table->string('ip_address', 45)->nullable();
             $table->text('user_agent')->nullable();
             $table->text('payload');
             $table->integer('last_activity')->index();
+            //Set common columns
+            $this->setCommonColumns($table);
         });
     }
 
@@ -30,6 +32,6 @@ class CreateSessionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sessions');
+        Schema::dropIfExists($this->prefix_table . 'sessions');
     }
 }

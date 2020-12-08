@@ -1,10 +1,10 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
+use App\BaseMigration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTaggablesTable extends Migration
+class CreateTaggablesTable extends BaseMigration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreateTaggablesTable extends Migration
      */
     public function up()
     {
-        Schema::create('taggables', function (Blueprint $table) {
+        Schema::create($this->prefix_table .'taggables', function (Blueprint $table) {
             $table->bigInteger('tag_id');
             $table->bigInteger('taggable_id');
             $table->string('taggable_type',100);
-            $table->softDeletes();
-            $table->timestamps();
+            //Set common columns
+            $this->setCommonColumns($table);
         });
     }
 
@@ -29,6 +29,6 @@ class CreateTaggablesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('taggables');
+        Schema::dropIfExists($this->prefix_table . 'taggables');
     }
 }

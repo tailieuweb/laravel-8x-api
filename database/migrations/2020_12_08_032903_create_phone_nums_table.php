@@ -1,10 +1,10 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
+use App\BaseMigration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePhoneNumsTable extends Migration
+class CreatePhoneNumsTable extends BaseMigration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreatePhoneNumsTable extends Migration
      */
     public function up()
     {
-        Schema::create('phone_nums', function (Blueprint $table) {
+        Schema::create($this->prefix_table .'phone_nums', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('phone_id');
             $table->string('phone_num');
-            $table->softDeletes();
-            $table->timestamps();
+            //Set common columns
+            $this->setCommonColumns($table);
         });
     }
 
@@ -29,6 +29,6 @@ class CreatePhoneNumsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('phone_nums');
+        Schema::dropIfExists($this->prefix_table . 'phone_nums');
     }
 }
