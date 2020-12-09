@@ -23,7 +23,9 @@ class UserSeeder extends BaseSeeder
                 'email' => "user{$i}@gmail.com",
                 'password' => Hash::make('123456789'),
                 'avatar' => "avatar{$i}",
-                'status' => "status{$i}",
+                'status' => 1,
+                'created_user_id' => 1,
+                'updated_user_id' => 1,
             ]);
         }
         

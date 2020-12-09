@@ -1,10 +1,10 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
+use App\BaseMigration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSessionsTable extends Migration
+class CreateSessionsTable extends BaseMigration
 {
     /**
      * Run the migrations.
@@ -20,6 +20,12 @@ class CreateSessionsTable extends Migration
             $table->text('user_agent')->nullable();
             $table->text('payload');
             $table->integer('last_activity')->index();
+            
+            //Add deleted_at field
+            $table->softDeletes();
+
+            //Add created_at and updated_at field
+            $table->timestamps();
         });
     }
 

@@ -1,10 +1,10 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
+use App\BaseMigration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePasswordResetsTable extends Migration
+class CreatePasswordResetsTable extends BaseMigration
 {
     /**
      * Run the migrations.
@@ -16,7 +16,8 @@ class CreatePasswordResetsTable extends Migration
         Schema::create('password_resets', function (Blueprint $table) {
             $table->string('email', 100)->index();
             $table->string('token');
-            $table->timestamp('created_at')->nullable();
+            //Set common columns
+            $this->setCommonColumns($table);
         });
     }
 
