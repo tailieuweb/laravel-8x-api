@@ -17,10 +17,13 @@ class UserSeeder extends BaseSeeder
     {
         for ($i = 0; $i < 10; $i++) {
             DB::table('users')->insert([
+                'country_id' => "country_id{$i}",
                 'name' => "user{$i}",
                 'username' => "username{$i}",
                 'email' => "user{$i}@gmail.com",
                 'password' => Hash::make('123456789'),
+                'avatar' => "avatar{$i}",
+                'status' => "status{$i}",
             ]);
         }
         
