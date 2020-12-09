@@ -1,10 +1,10 @@
 <?php
 
-use App\BaseMigration;
+use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePersonalAccessTokensTable extends BaseMigration
+class CreatePersonalAccessTokensTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreatePersonalAccessTokensTable extends BaseMigration
      */
     public function up()
     {
-        Schema::create($this->prefix_table .'personal_access_tokens', function (Blueprint $table) {
+        Schema::create('personal_access_tokens', function (Blueprint $table) {
             $table->bigIncrements('id');
 //            $table->morphs('tokenable');
             $table->unsignedInteger("taggable_id");
@@ -22,8 +22,7 @@ class CreatePersonalAccessTokensTable extends BaseMigration
             $table->string('token', 64)->unique();
             $table->text('abilities')->nullable();
             $table->timestamp('last_used_at')->nullable();
-            //Set common columns
-            $this->setCommonColumns($table);
+            $table->timestamps();
         });
     }
 
@@ -34,6 +33,6 @@ class CreatePersonalAccessTokensTable extends BaseMigration
      */
     public function down()
     {
-        Schema::dropIfExists($this->prefix_table . 'personal_access_tokens');
+        Schema::dropIfExists('personal_access_tokens');
     }
 }

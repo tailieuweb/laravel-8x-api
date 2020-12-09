@@ -1,10 +1,10 @@
 <?php
 
+use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use App\BaseMigration;
 
-class CreateUsersTable extends BaseMigration
+class CreateUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,21 +13,17 @@ class CreateUsersTable extends BaseMigration
      */
     public function up()
     {
-        Schema::create($this->prefix_table .'users', function (Blueprint $table) {
+        Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('country_id');
             $table->string('name');
-            $table->string('email', 100)->unique();
-            $table->string('password');
-            $table->string('avatar');
             $table->string('username');
+            $table->string('email', 100)->unique();
             $table->timestamp('email_verified_at')->nullable();
+            $table->string('password');
             $table->rememberToken();
             $table->foreignId('current_team_id')->nullable();
             $table->text('profile_photo_path')->nullable();
-            
-            //Set common columns
-            $this->setCommonColumns($table);
+            $table->timestamps();
         });
     }
 
@@ -38,6 +34,6 @@ class CreateUsersTable extends BaseMigration
      */
     public function down()
     {
-        Schema::dropIfExists($this->prefix_table . 'users');
+        Schema::dropIfExists('users');
     }
 }

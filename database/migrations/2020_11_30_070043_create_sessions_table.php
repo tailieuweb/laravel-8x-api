@@ -1,10 +1,10 @@
 <?php
 
-use App\BaseMigration;
+use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSessionsTable extends BaseMigration
+class CreateSessionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -20,8 +20,6 @@ class CreateSessionsTable extends BaseMigration
             $table->text('user_agent')->nullable();
             $table->text('payload');
             $table->integer('last_activity')->index();
-            //Set common columns
-            $this->setCommonColumns($table);
         });
     }
 
