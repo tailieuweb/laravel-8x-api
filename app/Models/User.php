@@ -17,9 +17,6 @@ class User extends Authenticatable
     use HasProfilePhoto;
     use Notifiable;
     use TwoFactorAuthenticatable;
-    public function posts(){
-        return $this->hasMany('App\Models\posts');
-    }
     /**
      * The attributes that are mass assignable.
      *

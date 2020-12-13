@@ -19,6 +19,9 @@ class PostsSeeder extends Seeder
                 'user_id' => "user_id{$i}",
                 'title' => "title{$i}",
                 'content' => "content{$i}",
+                'status' => 1,
+                'created_user_id' => 1,
+                'updated_user_id' => 1,
             ]);
         }
         
