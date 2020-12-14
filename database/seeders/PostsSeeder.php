@@ -15,11 +15,10 @@ class PostsSeeder extends Seeder
     public function run()
     {
         for ($i = 0; $i < 10; $i++) {
-            DB::table('posts')->insert([
+            DB::table('fit_posts')->insert([
                 'user_id' => "user_id{$i}",
                 'title' => "title{$i}",
                 'content' => "content{$i}",
-                'status' => 1,
                 'created_user_id' => 1,
                 'updated_user_id' => 1,
             ]);
