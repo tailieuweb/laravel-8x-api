@@ -21,11 +21,10 @@
             <!--MENU-->
             <div class="menu">
                <ul class="nav-menu collapse collapse-top-menu">
-                    <li class="item active"><a href="#"> Home </a></li>
-                    <li class="item"><a href="#"> About </a></li>
-                    <li class="item"><a href="#"> Mission </a></li>
-                    <li class="item"><a href="#"> Membership </a></li>
-                    <li class="item"><a href="#"> Contacts </a></li>
+                    <li class="item active"><a href="/"> Home </a></li>
+                    <li class="item"><a href="/manage"> Manage </a></li>
+                    <li class="item"><a href="/post"> Post </a></li>
+                    <li class="item"><a href="/about"> About </a></li>
                 </ul>
             </div>
             <!--END MENU-->
