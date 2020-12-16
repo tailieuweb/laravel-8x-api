@@ -1,0 +1,350 @@
+{
+	"info": {
+		"_postman_id": "2e5b651b-eb75-4081-a775-1b01b8e6238b",
+		"name": "Passport",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1-register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "user4",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "user4@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "c_password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://laravel-8x.local/api/register",
+					"protocol": "http",
+					"host": [
+						"laravel-8x",
+						"local"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2-login-OK",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "test@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://laravel-8x.local/api/login",
+					"protocol": "http",
+					"host": [
+						"laravel-8x",
+						"local"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2-login-NG",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "test@gmail.com1",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://laravel-8x.local/api/login",
+					"protocol": "http",
+					"host": [
+						"laravel-8x",
+						"local"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3-product-list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYWIyYmViNjE5M2Y1ZDE3ZTg4YTdmNTQ1M2Y5NzZiZmEzOGM1ZmNkNmU2OTAxZGQyNWJiY2U0NTk3Nzc1YzVkOGQ3ZTI4ZTc4ZGVmY2MwYzUiLCJpYXQiOiIxNjA4MDcxMTMzLjc1MTMyMyIsIm5iZiI6IjE2MDgwNzExMzMuNzUxMzMyIiwiZXhwIjoiMTYzOTYwNzEzMy43MzM0ODkiLCJzdWIiOiIxMDEiLCJzY29wZXMiOltdfQ.Mubv2gtWtq5vbGcsaP_lZsD0X7KgmbOYWozZWOAy1X71c2ejTR2-D_4ZHZCaD28_n37JT_N06usNG7dn2c4WbIG6V-at-PrDWgNPl8QFPNwQmlKmeLPIEj6V9M7tiZEwKcEjXdORlKyRs41USIBcL4rCMi3iVVTPXMMnYgG4pvC8cvlcs2huxDxPCW_glR-WXCwaQ1a02m155ZvT0nVvkiDQfEj9IetyiUX_bm2QhMrr7gwGoN6jplf_SMRgIJlyPvl_MLJsjemNq6Ujln0RLVnhF3UYFUMskkGPrKJWDt_zm3elLW96hNOujO4ZOnfvNWTDqX_luknGjNN8O3txa4lYQ7-1pr9NS7g55lH1fqP-SgIBnghjwrnMKAnSEoVK-islbGny5T9xryvEg_IFmGaV3gsVrDbi-xM6rkVvFptGJW1gmoznWCFfASAgDFTnbNOJel0TvKk6ryWksOpjxqA--F-RWTHXGNNjkSj18uN3oNudAQmm9krKeMMixGWeTM26ZrJbvnGULzn4u1LU34L9O8j1drEinU-nhNPE0Iak2pT-HbZUuCnA9V0eBSWRBbEFoUXXMlAMHcgKVvPwuVqKGPmir6UFva3HSaoGKVQLb4toVhXsfvdyhUu_i1rZU2At7bkDHg0gz5zkcTFnTLlhAnEM2odeYX1gKHwYXAs",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYWIyYmViNjE5M2Y1ZDE3ZTg4YTdmNTQ1M2Y5NzZiZmEzOGM1ZmNkNmU2OTAxZGQyNWJiY2U0NTk3Nzc1YzVkOGQ3ZTI4ZTc4ZGVmY2MwYzUiLCJpYXQiOiIxNjA4MDcxMTMzLjc1MTMyMyIsIm5iZiI6IjE2MDgwNzExMzMuNzUxMzMyIiwiZXhwIjoiMTYzOTYwNzEzMy43MzM0ODkiLCJzdWIiOiIxMDEiLCJzY29wZXMiOltdfQ.Mubv2gtWtq5vbGcsaP_lZsD0X7KgmbOYWozZWOAy1X71c2ejTR2-D_4ZHZCaD28_n37JT_N06usNG7dn2c4WbIG6V-at-PrDWgNPl8QFPNwQmlKmeLPIEj6V9M7tiZEwKcEjXdORlKyRs41USIBcL4rCMi3iVVTPXMMnYgG4pvC8cvlcs2huxDxPCW_glR-WXCwaQ1a02m155ZvT0nVvkiDQfEj9IetyiUX_bm2QhMrr7gwGoN6jplf_SMRgIJlyPvl_MLJsjemNq6Ujln0RLVnhF3UYFUMskkGPrKJWDt_zm3elLW96hNOujO4ZOnfvNWTDqX_luknGjNN8O3txa4lYQ7-1pr9NS7g55lH1fqP-SgIBnghjwrnMKAnSEoVK-islbGny5T9xryvEg_IFmGaV3gsVrDbi-xM6rkVvFptGJW1gmoznWCFfASAgDFTnbNOJel0TvKk6ryWksOpjxqA--F-RWTHXGNNjkSj18uN3oNudAQmm9krKeMMixGWeTM26ZrJbvnGULzn4u1LU34L9O8j1drEinU-nhNPE0Iak2pT-HbZUuCnA9V0eBSWRBbEFoUXXMlAMHcgKVvPwuVqKGPmir6UFva3HSaoGKVQLb4toVhXsfvdyhUu_i1rZU2At7bkDHg0gz5zkcTFnTLlhAnEM2odeYX1gKHwYXAs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "test@gmail.com1",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://laravel-8x.local/api/products",
+					"protocol": "http",
+					"host": [
+						"laravel-8x",
+						"local"
+					],
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4-product-create",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDU1ZWViMzYwYzcwZjZlZDVkMDg1OWQ2YTZiM2VlYzIyYTYwZjYzOGE3ZmIxNThmNjMwYmI5NzI4NDJmNjdmYmI0ZWM5ZTIwOTBlZGZjMTIiLCJpYXQiOiIxNjA4MTA1ODM2Ljk4MzQ1MyIsIm5iZiI6IjE2MDgxMDU4MzYuOTgzNDcxIiwiZXhwIjoiMTYzOTY0MTgzNi45Nzg0MzciLCJzdWIiOiI0Iiwic2NvcGVzIjpbXX0.L8kXukA8Frxf1rlJARkmiPrTVFTVN7faDlvGYnTkbhX5M4I-7Y3wBf3Fq4enS0A82DYbr3XIcsAhdruPW7_9guAMmpYb9UkJctuGxDl9AkqD_TQXebiuFxQRoLEXvXAahn8HWsXnjLLa4HVMTALiZcutPg27Jx9lp21I_YglDc1y-EPUpOtkECHuC6rkVXtCoP8mEhn9gOqZ6yLBwSJQKgw0MmlrfAY8wDNvvs3bCMhnN5btI0RL5mmknEnpJP9HL1rgGLTfJG-u8ZWd2FCckyedNtwsplJMiVaFJlWiZSrghagNSuppmdZOkcyx5tTOF-79Q8OHjzV5Us3YP-ydyF0MBQmwm7hFj9nHeXeRVtR53o7Jki7Yr6Q3ribWLHxkqrc3vtXn5DgLKrmvF0Ve1KY8Tl8Yr8xY-pFQOnnuxrbYgk3gVM-2w4p3Agnr8FngqOS2-q2ZYe1AQbop-XzfpsQOSOe6gG2ZIfBdSD10BgkQzQFSFp2mygS5XTmfURH06Op0YcW2DOtjJatCXbCi2sZQVPZlFo9haAK9DxhnphOaGnL795zDUmRRQk7H9S22Cktfj8o7PB1prhJsYwaO8iLTlquMIUMud2-KB1QOvB36iNMO0ULgHoQ_7oeyQrMkhb03wvh2QvkyoZ9flgiP0fwTSgIONy_kPVeCpuDcFeo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "test1111",
+							"type": "text"
+						},
+						{
+							"key": "detail",
+							"value": "test1111",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://laravel-8x.local/api/products",
+					"protocol": "http",
+					"host": [
+						"laravel-8x",
+						"local"
+					],
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5-product-detail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYjA5YmE3ZTdhYjQ3Nzc1NDE0NjdmMzE4ZjZhNGQ4ZDY3MjgxNjYwZmE3YTcyYjIxOGI0ZTczNTkyZjY3MmY4OWY0NTA4MWI0MDMzMjc4OWQiLCJpYXQiOiIxNjA4MDcyMjYxLjQzOTg5MCIsIm5iZiI6IjE2MDgwNzIyNjEuNDM5OTAyIiwiZXhwIjoiMTYzOTYwODI2MS40MzQ3MTMiLCJzdWIiOiIxMDEiLCJzY29wZXMiOltdfQ.NwQm3LbU9ijoXNQba6EXqP7C4Qp8Fl9IzhDeRx1YsBz9EamqPg3QKcQePOy7UPPuJxaHqdyZeXVlAY61lA7XM8A_JHaxwq7cWVXWIhsK-yvFwiluw0DJAEvo43x8ZZVVsycOMCQ26msdg9GuRtROSOoLIF149ve8kTbgKEmyoT5Wtgv7Xv7zmQEy0euRkD_OqC-1YjX5LkAe8-2NX5jelKazZiiVeLrfxbDugufHTunxTDfYlrIQDYflAw-ZA4DDeuSp29NrL3jwBAm1wwezvXp9DWG4a4DfPNUNUyIQtYgz75ETJHETak9agVU3-5C_i3v9GWh8Fymwv-54T_eJunJiidmi5RZgk2XNYsb1BOsHMQ7yv1X1YPm5a6OebsHRRL0BLOIlQw8FG8DkzErO4Xw5FtyyMu3taWGU0PabuKJ2JwZMP-BdpXzYMJnNaJfkfXQoqEL_N-OtzBbXfplGq8ay1-RG89K73hnilckDSGbI4XLuWucVCx4K_Okm0DQTc22t-3F2ttpfLtaDR5EULSR588lYKCi5WYD9FQsBdoANoXSp730cLhQnhKGK_0mMYqxRSWRfmD-KZ15M1oompfjd_-jyjjuvfqyH0ei9dedq7UF21jw7MEH1OYS8-TXIc4rT8uNs8dHIM2mApb1FUK1gK8hds8NM6jnwSMhLhNA"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "test1111",
+							"type": "text"
+						},
+						{
+							"key": "detail",
+							"value": "test1111",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://laravel-8x.local/api/products/1",
+					"protocol": "http",
+					"host": [
+						"laravel-8x",
+						"local"
+					],
+					"path": [
+						"api",
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6-product-update",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYjA5YmE3ZTdhYjQ3Nzc1NDE0NjdmMzE4ZjZhNGQ4ZDY3MjgxNjYwZmE3YTcyYjIxOGI0ZTczNTkyZjY3MmY4OWY0NTA4MWI0MDMzMjc4OWQiLCJpYXQiOiIxNjA4MDcyMjYxLjQzOTg5MCIsIm5iZiI6IjE2MDgwNzIyNjEuNDM5OTAyIiwiZXhwIjoiMTYzOTYwODI2MS40MzQ3MTMiLCJzdWIiOiIxMDEiLCJzY29wZXMiOltdfQ.NwQm3LbU9ijoXNQba6EXqP7C4Qp8Fl9IzhDeRx1YsBz9EamqPg3QKcQePOy7UPPuJxaHqdyZeXVlAY61lA7XM8A_JHaxwq7cWVXWIhsK-yvFwiluw0DJAEvo43x8ZZVVsycOMCQ26msdg9GuRtROSOoLIF149ve8kTbgKEmyoT5Wtgv7Xv7zmQEy0euRkD_OqC-1YjX5LkAe8-2NX5jelKazZiiVeLrfxbDugufHTunxTDfYlrIQDYflAw-ZA4DDeuSp29NrL3jwBAm1wwezvXp9DWG4a4DfPNUNUyIQtYgz75ETJHETak9agVU3-5C_i3v9GWh8Fymwv-54T_eJunJiidmi5RZgk2XNYsb1BOsHMQ7yv1X1YPm5a6OebsHRRL0BLOIlQw8FG8DkzErO4Xw5FtyyMu3taWGU0PabuKJ2JwZMP-BdpXzYMJnNaJfkfXQoqEL_N-OtzBbXfplGq8ay1-RG89K73hnilckDSGbI4XLuWucVCx4K_Okm0DQTc22t-3F2ttpfLtaDR5EULSR588lYKCi5WYD9FQsBdoANoXSp730cLhQnhKGK_0mMYqxRSWRfmD-KZ15M1oompfjd_-jyjjuvfqyH0ei9dedq7UF21jw7MEH1OYS8-TXIc4rT8uNs8dHIM2mApb1FUK1gK8hds8NM6jnwSMhLhNA"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "test1111",
+							"type": "text"
+						},
+						{
+							"key": "detail",
+							"value": "test1111",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://laravel-8x.local/api/products/1",
+					"protocol": "http",
+					"host": [
+						"laravel-8x",
+						"local"
+					],
+					"path": [
+						"api",
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

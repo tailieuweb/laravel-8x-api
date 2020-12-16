@@ -27,15 +27,28 @@ class ProductController extends BaseController
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    public function generateRandomString($length = 10) {
+        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $charactersLength = strlen($characters);
+        $randomString = '';
+        for ($i = 0; $i < $length; $i++) {
+            $randomString .= $characters[rand(0, $charactersLength - 1)];
+        }
+        return $randomString;
+    }
+
     public function store(Request $request)
     {
         $input = $request->all();
-   
+        $input = [
+            'name'   => $this->generateRandomString(),
+            'detail' => $this->generateRandomString(100)
+        ];
         $validator = Validator::make($input, [
             'name' => 'required',
             'detail' => 'required'
         ]);
-   
+
         if($validator->fails()){
             return $this->sendError('Validation Error.', $validator->errors());       
         }
