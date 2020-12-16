@@ -14,6 +14,9 @@
         <link href="{{ asset('assets/css/61.css') }}" rel="stylesheet">
         <link href="{{ asset('assets/css/2048.css') }}" rel="stylesheet">
         <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
+        
+        
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     </head>
     <body>
