@@ -1,0 +1,97 @@
+.type-12 #myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 10%;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #ec9e9e;
+  color: white;
+  cursor: pointer;
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+.type-12 #myBtn:hover {
+  opacity: 0.8;
+}
+.type-12 .module-1 {
+  background: #1f253d;
+  text-align: center;
+}
+.type-12 .module-1 .btn-menu-main {
+  margin: 0 30px;
+}
+.type-12 .module-1 .menu li {
+  list-style: none;
+  padding: 10px;
+  cursor: pointer;
+}
+.type-12 .module-1 .menu ul {
+  margin: 0;
+}
+.type-12 .module-1 .menu ul .active a {
+  color: #ec9e9e;
+}
+.type-12 .module-1 .menu a {
+  font-size: 16px;
+  text-decoration: none;
+  color: #fff;
+}
+.type-12 .module-1 .menu li:hover>a {
+  color: #ec9e9e;
+}
+.type-12 .module-1 .btn-menu {
+  font-size: 25px;
+  padding: 3px 10px;
+  border: 1px solid #e7e7e7;
+  margin: 10px 0;
+  border-radius: 4px;
+  color: #888;
+  float: right;
+}
+.type-12 .module-1 .btn-menu:hover {
+  background: #e7e7e7;
+}
+@media (min-width: 992px) {
+  .type-12 .module-3 {
+    position: absolute;
+  }
+  .type-12 .content-3,
+  .type-12 .content-4,
+  .type-12 .content-5,
+  .type-12 .content-6 {
+    width: 960px;
+  }
+  .type-12 .module-4 {
+    margin-top: 284px;
+  }
+  .type-12 .btn-menu {
+    display: none;
+  }
+  .type-12 .nav-menu {
+    display: block;
+  }
+  .type-12 li {
+    display: inline;
+    border-left: 1px solid #fff;
+  }
+  .type-12 li:first-child {
+    border-left: none;
+  }
+  .type-12 ul {
+    padding: 0;
+  }
+  .type-12 .menu {
+    padding: 20px 0;
+  }
+}
+@media (max-width: 992px) {
+  .type-12 ul:first-child {
+    border-top: 1px solid #e7e7e7;
+  }
+  .type-12 ul {
+    padding: 7.5px 0;
+  }
+}
