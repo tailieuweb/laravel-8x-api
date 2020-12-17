@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\ExampleController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +18,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/ex01', [ExampleController::class, 'ex01']);
