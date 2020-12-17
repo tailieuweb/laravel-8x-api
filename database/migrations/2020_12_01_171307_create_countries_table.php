@@ -4,7 +4,7 @@ use App\BaseMigration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePasswordResetsTable extends BaseMigration
+class CreateCountriesTable extends BaseMigration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreatePasswordResetsTable extends BaseMigration
      */
     public function up()
     {
-        Schema::create('password_resets', function (Blueprint $table) {
-            $table->string('email', 100)->index();
-            $table->string('token');
+        Schema::create($this->prefix_table .'countries', function (Blueprint $table) {
+            $table->id();
+            $table->string('country_name');
             //Set common columns
             $this->setCommonColumns($table);
         });
@@ -28,6 +28,6 @@ class CreatePasswordResetsTable extends BaseMigration
      */
     public function down()
     {
-        Schema::dropIfExists('password_resets');
+        Schema::dropIfExists($this->prefix_table . 'countries');
     }
 }

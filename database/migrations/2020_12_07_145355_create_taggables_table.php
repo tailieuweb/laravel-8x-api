@@ -4,7 +4,7 @@ use App\BaseMigration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePasswordResetsTable extends BaseMigration
+class CreateTaggablesTable extends BaseMigration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class CreatePasswordResetsTable extends BaseMigration
      */
     public function up()
     {
-        Schema::create('password_resets', function (Blueprint $table) {
-            $table->string('email', 100)->index();
-            $table->string('token');
+        Schema::create($this->prefix_table .'taggables', function (Blueprint $table) {
+            $table->bigInteger('tag_id');
+            $table->bigInteger('taggable_id');
+            $table->string('taggable_type',100);
             //Set common columns
             $this->setCommonColumns($table);
         });
@@ -28,6 +29,6 @@ class CreatePasswordResetsTable extends BaseMigration
      */
     public function down()
     {
-        Schema::dropIfExists('password_resets');
+        Schema::dropIfExists($this->prefix_table . 'taggables');
     }
 }
