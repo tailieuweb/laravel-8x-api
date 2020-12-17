@@ -9,13 +9,47 @@ use Illuminate\Routing\Controller as BaseController;
 
     use Illuminate\Support\Collection;
 use App\Models\User;
+use App\Models\Permission;
+use App\Models\UserHasPermission;
+
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 class ExampleController extends Controller
 {
     
     public function ex01() {
-            $this->ex01_05_cursor();
+            $this->ex01_12_firstOrCreate();
         
+    }
+    
+    public function ex01_12_firstOrCreate() {
+        
+        $permission = Permission::firstOrCreate([
+            'permission_name' => 'foo'
+        ]);
+        
+        var_dump($permission);
+        die();
+        
+    }
+    
+    
+    public function ex01_11_not_found_exception() {
+        try {
+            $user = User::findOrFail(11);
+        } catch (ModelNotFoundException  $e) {
+            echo $e->getMessage();
+        }
+    }
+    
+    public function ex01_10_sub_select() {
+        $user =  User::addSelect(['last_permission_id' => UserHasPermission::select('permission_id')
+                ->whereColumn('users.id', 'user_has_permissions.user_id')
+                ->limit(1)
+            ])->get();
+        
+        var_dump($user->toArray());
+        die();
     }
     
     public function ex01_01() {
