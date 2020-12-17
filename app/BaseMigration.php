@@ -14,7 +14,7 @@ class BaseMigration extends Migration
      * Prefix table in project Helpdesk
      * @var type 
      */
-    public $prefix_table = "fit_";
+    public $prefix_table = "";
 
 
     /**
@@ -30,8 +30,8 @@ class BaseMigration extends Migration
         $table->integer('sequence')->nullable()->comment('Input order');
         
         //Add created_user_id and updated_user_id
-        $table->integer('created_user_id')->comment('Created by User Id');
-        $table->integer('updated_user_id')->comment('Updated by User Id');
+//        $table->integer('created_user_id')->comment('Created by User Id');
+//        $table->integer('updated_user_id')->comment('Updated by User Id');
         
         //Add deleted_at field
         $table->softDeletes();

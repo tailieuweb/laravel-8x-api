@@ -4,7 +4,7 @@ use App\BaseMigration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUsersHasPermissionsTable extends BaseMigration
+class CreateUserHasPermissionTable extends BaseMigration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateUsersHasPermissionsTable extends BaseMigration
      */
     public function up()
     {
-        Schema::create($this->prefix_table .'users_has_permissions', function (Blueprint $table) {
+        Schema::create($this->prefix_table .'user_has_permissions', function (Blueprint $table) {
             $table->id();
             $table->string('user_id');
             $table->string('permission_id');
@@ -29,6 +29,6 @@ class CreateUsersHasPermissionsTable extends BaseMigration
      */
     public function down()
     {
-        Schema::dropIfExists($this->prefix_table . 'users_has_permissions');
+        Schema::dropIfExists($this->prefix_table . 'user_has_permissions');
     }
 }

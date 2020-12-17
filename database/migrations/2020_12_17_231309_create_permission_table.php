@@ -4,7 +4,7 @@ use App\BaseMigration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePermissionsTable extends BaseMigration
+class CreatePermissionTable extends BaseMigration
 {
     /**
      * Run the migrations.
@@ -16,7 +16,6 @@ class CreatePermissionsTable extends BaseMigration
         Schema::create($this->prefix_table .'permissions', function (Blueprint $table) {
             $table->id();
             $table->string('permission_name');
-            $table->string('permission_type');
             //Set common columns
             $this->setCommonColumns($table);
         });
