@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\User;
+use App\Notifications\Slack;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,3 +25,8 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 
 Route::get('/send/message','App\Http\Controllers\SmsController@sendMessage');
+
+Route::get('/slack', function () {
+    $admin = User::find(1);
+    $admin->notify(new Slack);
+});
