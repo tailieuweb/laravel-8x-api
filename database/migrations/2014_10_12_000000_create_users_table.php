@@ -28,6 +28,9 @@ class CreateUsersTable extends BaseMigration
             
             //Set common columns
             $this->setCommonColumns($table);
+            /*
+           
+            */
         });
     }
 
