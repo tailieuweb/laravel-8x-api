@@ -17,7 +17,7 @@ class UserSeeder extends BaseSeeder
     {
         for ($i = 0; $i < 10; $i++) {
             DB::table('users')->insert([
-                'country_id' => "country_id{$i}",
+                'country_id' => rand(1,3),
                 'name' => "user{$i}",
                 'username' => "username{$i}",
                 'email' => "user{$i}@gmail.com",
