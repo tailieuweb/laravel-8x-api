@@ -18,7 +18,6 @@ class CreateFieldValuesTable extends BaseMigration
             $table->string('field_type_id');
             $table->string('user_id');
             $table->string('value');
-            $table->string('timestamps');
             //Set common columns
             $this->setCommonColumns($table);
         });
