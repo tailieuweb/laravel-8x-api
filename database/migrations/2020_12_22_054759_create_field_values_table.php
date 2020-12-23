@@ -20,6 +20,7 @@ class CreateFieldValuesTable extends BaseMigration
             $table->string('value');
             //Set common columns
             $this->setCommonColumns($table);
+            $table->softDeletes();
         });
     }
 
