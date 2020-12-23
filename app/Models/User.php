@@ -10,6 +10,7 @@ use App\Models\Phone;
 use App\Models\Permission;
 use App\Models\PhoneNum;
 use App\Models\Post;
+use App\Models\Image;
 
 class User extends Authenticatable
 {
@@ -89,6 +90,11 @@ class User extends Authenticatable
                     'id', //permissions.id
                  );
          
+    }
+    
+    public function image()
+    {
+        return $this->morphOne(Image::class, 'imageable');
     }
     
 }

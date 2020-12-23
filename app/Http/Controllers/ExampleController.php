@@ -21,9 +21,19 @@ class ExampleController extends Controller
 {
     
     public function ex01() {
-            $this->ex01_22_pivot();
+            $this->ex01_23_one_to_one_poly();
         
     }
+    
+    
+    //https://laravel.com/docs/8.x/eloquent-relationships#one-to-one-polymorphic-relations
+    public function ex01_23_one_to_one_poly() {
+        $user = User::find(1);
+        $image = $user->image;
+        var_dump($image->toArray());
+        die();
+    }
+    
     
     //https://laravel.com/docs/8.x/eloquent-relationships#retrieving-intermediate-table-columns
     public function ex01_22_pivot() {

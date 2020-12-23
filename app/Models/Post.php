@@ -8,6 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use App\Models\Phone;
 use App\Models\User;
+use App\Models\Image;
 
 class Post extends Authenticatable
 {
@@ -67,5 +68,9 @@ class Post extends Authenticatable
 //        return $this->user()->first();
 //    }
     
+    public function image()
+    {
+        return $this->morphOne(Image::class, 'imageable');
+    }
 
 }
