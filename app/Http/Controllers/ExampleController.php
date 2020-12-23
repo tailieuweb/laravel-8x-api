@@ -9,6 +9,7 @@ use Illuminate\Routing\Controller as BaseController;
 
     use Illuminate\Support\Collection;
 use App\Models\User;
+use App\Models\Phone;
 use App\Models\Permission;
 use App\Models\UserHasPermission;
 
@@ -18,9 +19,21 @@ class ExampleController extends Controller
 {
     
     public function ex01() {
-            $this->ex01_12_firstOrCreate();
+            $this->ex01_13_one_to_one();
         
     }
+    
+    public function ex01_14_one_to_one() {
+        $user = Phone::find(1)->user;
+        var_dump($user->toArray());
+        die();
+    }
+    public function ex01_13_one_to_one() {
+        $user = User::find(1);        
+        var_dump($user->toArray());
+        die();
+    }
+           
     
     public function ex01_12_firstOrCreate() {
         

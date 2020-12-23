@@ -6,23 +6,21 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use App\Models\Phone;
+use App\Models\User;
 
-class User extends Authenticatable
+class Phone extends Authenticatable
 {
     use HasFactory, Notifiable;
 
-    protected $table = 'users';
-    protected $appends = ['phone'];
+    protected $table = 'phones';
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name',
-        'email',
-        'password',
+        'user_id',
+        'phone_type',        
     ];
 
     /**
@@ -31,8 +29,6 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password',
-        'remember_token',
     ];
 
     /**
@@ -41,20 +37,11 @@ class User extends Authenticatable
      * @var array
      */
     protected $casts = [
-        'email_verified_at' => 'datetime',
     ];
     
-        /**
-     * Get the phone associated with the user.
-     */
-    public function phone()
+     public function user()
     {
-        return $this->hasOne(Phone::class, 'user_id', 'id');
+        return $this->belongsTo(User::class, 'user_id', 'id');
     }
-    
-    public function getPhoneAttribute() {
-
-        return $this->phone();
-    }
-
+      
 }
