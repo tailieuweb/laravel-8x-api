@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Broadcast;
-
+use App\Models\Country;
 /*
 |--------------------------------------------------------------------------
 | Broadcast Channels
@@ -15,4 +15,8 @@ use Illuminate\Support\Facades\Broadcast;
 
 Broadcast::channel('App.Models.orders.{orderId}', function ($user, $orderId) {
     return (int) $user->id === (int) Order::findOrNew($orderId)->user_id;
+});
+
+Broadcast::channel('country-tracker.{id}', function ($user, $id) {
+    return (int) $user->id === (int) Country::findOrNew($id)->user_id;
 });
