@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "aa662c0922aaebacb46abfff45f0c638",
+    "content-hash": "e04457c76a3f1cfdafffec23d36407c5",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -697,6 +697,48 @@
                 "source": "https://github.com/foostart/package-filemanager/tree/8.0.0"
             },
             "time": "2020-12-27T03:39:12+00:00"
+        },
+        {
+            "name": "foostart/package-pexcel",
+            "version": "7.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/foostart/package-pexcel.git",
+                "reference": "f6fa01f28a3dfa2647a1e26ebfd89b3c917e21e9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/foostart/package-pexcel/zipball/f6fa01f28a3dfa2647a1e26ebfd89b3c917e21e9",
+                "reference": "f6fa01f28a3dfa2647a1e26ebfd89b3c917e21e9",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Foostart\\Pexcel\\": "/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "FooStart",
+                    "email": "foostart.com@gmail.com",
+                    "homepage": "http://foostart.com"
+                }
+            ],
+            "description": "Create overview pexcel can intergrate other project",
+            "keywords": [
+                "foostart",
+                "laravel 5 package pexcel"
+            ],
+            "support": {
+                "issues": "https://github.com/foostart/package-pexcel/issues",
+                "source": "https://github.com/foostart/package-pexcel/tree/master"
+            },
+            "time": "2019-06-03T07:11:41+00:00"
         },
         {
             "name": "foostart/package-post",

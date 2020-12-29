@@ -102,5 +102,12 @@ return [
                 "link"        => '/admin/slideshows',
                 "permissions" => [$admin]
             ],
+            //Pexcel
+            [
+                "name"        => 'pexcel-admin.menus.top-menu',
+                "route"       => "pexcels",
+                "link"        => '/admin/pexcels',
+                "permissions" => [$admin]
+            ],
     ]
 ];
