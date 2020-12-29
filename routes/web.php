@@ -33,7 +33,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/countries/{country}', 'App\Http\Controllers\UserCountryController@show')->name('user.countries.show');
     Route::get('/change-language/{language}', 'App\Http\Controllers\ChangeLanguageController@index')->name('language.index');
 });
-
+Route::get('/email', 'App\Http\Controllers\EmailController@create')->name('mail');
+Route::post('/email', 'App\Http\Controllers\EmailController@sendEmail')->name('send.email');
 
 
 Route::prefix('admin')->group(function () {
@@ -41,3 +42,4 @@ Route::prefix('admin')->group(function () {
     Route::get('/countries/edit/{country}', 'App\Http\Controllers\AdminCountryController@edit')->name('admin.countries.edit');
     Route::post('/countries/{country}', 'App\Http\Controllers\AdminCountryController@update')->name('admin.countries.update');
 });
+

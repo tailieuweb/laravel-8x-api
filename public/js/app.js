@@ -39871,7 +39871,7 @@ module.exports = function(module) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\nModuleBuildError: Module build failed (from ./node_modules/postcss-loader/src/index.js):\nError: PostCSS plugin tailwindcss requires PostCSS 8.\nMigration guide for end-users:\nhttps://github.com/postcss/postcss/wiki/PostCSS-8-for-end-users\n    at Processor.normalize (D:\\laravel-8x\\node_modules\\postcss\\lib\\processor.js:153:15)\n    at new Processor (D:\\laravel-8x\\node_modules\\postcss\\lib\\processor.js:56:25)\n    at postcss (D:\\laravel-8x\\node_modules\\postcss\\lib\\postcss.js:55:10)\n    at D:\\laravel-8x\\node_modules\\postcss-loader\\src\\index.js:140:12\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n    at D:\\laravel-8x\\node_modules\\webpack\\lib\\NormalModule.js:316:20\n    at D:\\laravel-8x\\node_modules\\loader-runner\\lib\\LoaderRunner.js:367:11\n    at D:\\laravel-8x\\node_modules\\loader-runner\\lib\\LoaderRunner.js:233:18\n    at context.callback (D:\\laravel-8x\\node_modules\\loader-runner\\lib\\LoaderRunner.js:111:13)\n    at D:\\laravel-8x\\node_modules\\postcss-loader\\src\\index.js:208:9\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)");
+throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\nModuleBuildError: Module build failed (from ./node_modules/postcss-loader/src/index.js):\nError: PostCSS plugin tailwindcss requires PostCSS 8.\nMigration guide for end-users:\nhttps://github.com/postcss/postcss/wiki/PostCSS-8-for-end-users\n    at Processor.normalize (C:\\wamp64\\www\\laravel-8x\\node_modules\\postcss\\lib\\processor.js:153:15)\n    at new Processor (C:\\wamp64\\www\\laravel-8x\\node_modules\\postcss\\lib\\processor.js:56:25)\n    at postcss (C:\\wamp64\\www\\laravel-8x\\node_modules\\postcss\\lib\\postcss.js:55:10)\n    at C:\\wamp64\\www\\laravel-8x\\node_modules\\postcss-loader\\src\\index.js:140:12\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n    at C:\\wamp64\\www\\laravel-8x\\node_modules\\webpack\\lib\\NormalModule.js:316:20\n    at C:\\wamp64\\www\\laravel-8x\\node_modules\\loader-runner\\lib\\LoaderRunner.js:367:11\n    at C:\\wamp64\\www\\laravel-8x\\node_modules\\loader-runner\\lib\\LoaderRunner.js:233:18\n    at context.callback (C:\\wamp64\\www\\laravel-8x\\node_modules\\loader-runner\\lib\\LoaderRunner.js:111:13)\n    at C:\\wamp64\\www\\laravel-8x\\node_modules\\postcss-loader\\src\\index.js:208:9\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)");
 
 /***/ }),
 
@@ -39933,8 +39933,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 window.Pusher = __webpack_require__(/*! pusher-js */ "./node_modules/pusher-js/dist/web/pusher.js");
 window.Echo = new laravel_echo__WEBPACK_IMPORTED_MODULE_0__["default"]({
   broadcaster: 'pusher',
-  key: "68be33172f93972a2a5e",
-  cluster: "ap1",
+  key: "",
+  cluster: "mt1",
   forceTLS: true
 });
 
@@ -40085,8 +40085,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\laravel-8x\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\laravel-8x\resources\css\app.css */"./resources/css/app.css");
+__webpack_require__(/*! C:\wamp64\www\laravel-8x\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\wamp64\www\laravel-8x\resources\css\app.css */"./resources/css/app.css");
 
 
 /***/ })

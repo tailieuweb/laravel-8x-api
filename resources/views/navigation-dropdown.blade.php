@@ -24,7 +24,9 @@
                     <x-jet-nav-link href="{{ route('admin.countries') }}" :active="request()->routeIs('admin.countries')">
                         {{ __('Admin') }}
                     </x-jet-nav-link>
-
+                    <x-jet-nav-link href="{{ route('mail') }}" :active="request()->routeIs('mail')">
+                        {{ __('Send Mail') }}
+                    </x-jet-nav-link>
 
                 </div>
             </div>
