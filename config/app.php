@@ -185,6 +185,7 @@ return [
         Foostart\Filemanager\FilemanagerServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
         Foostart\Pexcel\PexcelServiceProvider::class,
+        Maatwebsite\Excel\ExcelServiceProvider::class,
 
 ],
 
@@ -242,6 +243,7 @@ return [
          * My aliases
          */
         'Image' => Intervention\Image\Facades\Image::class,
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
 
     ],
 
