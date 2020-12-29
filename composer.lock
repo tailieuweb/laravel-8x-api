@@ -519,16 +519,16 @@
         },
         {
             "name": "foostart/package-acl",
-            "version": "8.0.1",
+            "version": "8.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/foostart/package-acl.git",
-                "reference": "53307f5a0b6ddd859395e284263563d4bf0e98fd"
+                "reference": "0f148e721e466bcadde65ff1d816b0a77dcbc120"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/foostart/package-acl/zipball/53307f5a0b6ddd859395e284263563d4bf0e98fd",
-                "reference": "53307f5a0b6ddd859395e284263563d4bf0e98fd",
+                "url": "https://api.github.com/repos/foostart/package-acl/zipball/0f148e721e466bcadde65ff1d816b0a77dcbc120",
+                "reference": "0f148e721e466bcadde65ff1d816b0a77dcbc120",
                 "shasum": ""
             },
             "require": {
@@ -577,22 +577,22 @@
             ],
             "support": {
                 "issues": "https://github.com/foostart/package-acl/issues",
-                "source": "https://github.com/foostart/package-acl/tree/8.0.1"
+                "source": "https://github.com/foostart/package-acl/tree/8.0.5"
             },
-            "time": "2020-12-23T03:13:43+00:00"
+            "time": "2020-12-28T04:44:26+00:00"
         },
         {
             "name": "foostart/package-category",
-            "version": "8.0.5",
+            "version": "8.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/foostart/package-category.git",
-                "reference": "72ddb2e3d6a6f2e29508e011aa9f2908dca3b1e2"
+                "reference": "9ca1ee29f5cc26f84cf13e65d34a77a7c716bda2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/foostart/package-category/zipball/72ddb2e3d6a6f2e29508e011aa9f2908dca3b1e2",
-                "reference": "72ddb2e3d6a6f2e29508e011aa9f2908dca3b1e2",
+                "url": "https://api.github.com/repos/foostart/package-category/zipball/9ca1ee29f5cc26f84cf13e65d34a77a7c716bda2",
+                "reference": "9ca1ee29f5cc26f84cf13e65d34a77a7c716bda2",
                 "shasum": ""
             },
             "type": "library",
@@ -619,22 +619,22 @@
             ],
             "support": {
                 "issues": "https://github.com/foostart/package-category/issues",
-                "source": "https://github.com/foostart/package-category/tree/8.0.5"
+                "source": "https://github.com/foostart/package-category/tree/8.0.7"
             },
-            "time": "2020-02-24T04:07:10+00:00"
+            "time": "2020-12-23T07:38:32+00:00"
         },
         {
             "name": "foostart/package-filemanager",
-            "version": "1.0.2",
+            "version": "8.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/foostart/package-filemanager.git",
-                "reference": "45f296feb7306ad32d4be85960f644615befb504"
+                "reference": "3bf781596178f047ad9b02ea698b15a504031af6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/foostart/package-filemanager/zipball/45f296feb7306ad32d4be85960f644615befb504",
-                "reference": "45f296feb7306ad32d4be85960f644615befb504",
+                "url": "https://api.github.com/repos/foostart/package-filemanager/zipball/3bf781596178f047ad9b02ea698b15a504031af6",
+                "reference": "3bf781596178f047ad9b02ea698b15a504031af6",
                 "shasum": ""
             },
             "require": {
@@ -694,9 +694,9 @@
             ],
             "support": {
                 "issues": "https://github.com/foostart/package-filemanager/issues",
-                "source": "https://github.com/foostart/package-filemanager/tree/master"
+                "source": "https://github.com/foostart/package-filemanager/tree/8.0.1"
             },
-            "time": "2020-02-21T08:27:26+00:00"
+            "time": "2020-12-29T08:09:38+00:00"
         },
         {
             "name": "foostart/package-post",
@@ -746,7 +746,7 @@
         },
         {
             "name": "foostart/package-sentry",
-            "version": "8.0.0",
+            "version": "8.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/foostart/package-sentry.git",
@@ -820,22 +820,22 @@
             ],
             "support": {
                 "issues": "https://github.com/foostart/package-sentry/issues",
-                "source": "https://github.com/foostart/package-sentry/tree/master"
+                "source": "https://github.com/foostart/package-sentry/tree/7.23.0"
             },
             "time": "2020-08-24T21:52:29+00:00"
         },
         {
             "name": "foostart/package-slideshow",
-            "version": "7.0.0",
+            "version": "8.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/foostart/package-slideshow.git",
-                "reference": "4b02809791017915e6db76aa4530acfc5732eecc"
+                "reference": "3ce80c68394cfd5315e854d761fb98bfe20a40de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/foostart/package-slideshow/zipball/4b02809791017915e6db76aa4530acfc5732eecc",
-                "reference": "4b02809791017915e6db76aa4530acfc5732eecc",
+                "url": "https://api.github.com/repos/foostart/package-slideshow/zipball/3ce80c68394cfd5315e854d761fb98bfe20a40de",
+                "reference": "3ce80c68394cfd5315e854d761fb98bfe20a40de",
                 "shasum": ""
             },
             "type": "library",
@@ -862,9 +862,9 @@
             ],
             "support": {
                 "issues": "https://github.com/foostart/package-slideshow/issues",
-                "source": "https://github.com/foostart/package-slideshow/tree/4.0.0"
+                "source": "https://github.com/foostart/package-slideshow/tree/8.0.0"
             },
-            "time": "2019-04-07T16:46:58+00:00"
+            "time": "2020-12-23T07:39:28+00:00"
         },
         {
             "name": "fruitcake/laravel-cors",
@@ -5540,16 +5540,16 @@
         },
         {
             "name": "facade/ignition",
-            "version": "2.5.3",
+            "version": "2.5.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/facade/ignition.git",
-                "reference": "d8dc4f90ed469f9f9313b976fb078c20585d5c99"
+                "reference": "8e907d81244649c5ea746e2ec30c32c5f59df472"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/facade/ignition/zipball/d8dc4f90ed469f9f9313b976fb078c20585d5c99",
-                "reference": "d8dc4f90ed469f9f9313b976fb078c20585d5c99",
+                "url": "https://api.github.com/repos/facade/ignition/zipball/8e907d81244649c5ea746e2ec30c32c5f59df472",
+                "reference": "8e907d81244649c5ea746e2ec30c32c5f59df472",
                 "shasum": ""
             },
             "require": {
@@ -5613,7 +5613,7 @@
                 "issues": "https://github.com/facade/ignition/issues",
                 "source": "https://github.com/facade/ignition"
             },
-            "time": "2020-12-09T20:25:45+00:00"
+            "time": "2020-12-29T09:12:55+00:00"
         },
         {
             "name": "facade/ignition-contracts",
