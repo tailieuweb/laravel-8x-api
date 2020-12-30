@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "074d141b180b08507b2113e4026b6b59",
+    "content-hash": "1b208fb34be6371a919dbf3886588e7e",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -622,6 +622,48 @@
                 "source": "https://github.com/foostart/package-category/tree/8.0.7"
             },
             "time": "2020-12-23T07:38:32+00:00"
+        },
+        {
+            "name": "foostart/package-checklist",
+            "version": "8.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/foostart/package-checklist.git",
+                "reference": "d844f99d5ce71793802e06158ccdb8a7e7e7ac67"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/foostart/package-checklist/zipball/d844f99d5ce71793802e06158ccdb8a7e7e7ac67",
+                "reference": "d844f99d5ce71793802e06158ccdb8a7e7e7ac67",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Foostart\\Checklist\\": "/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "FooStart",
+                    "email": "foostart.com@gmail.com",
+                    "homepage": "http://foostart.com"
+                }
+            ],
+            "description": "Create overview checklist can intergrate other project",
+            "keywords": [
+                "foostart",
+                "laravel 5 package checklist"
+            ],
+            "support": {
+                "issues": "https://github.com/foostart/package-checklist/issues",
+                "source": "https://github.com/foostart/package-checklist/tree/8.0.1"
+            },
+            "time": "2019-06-03T07:11:02+00:00"
         },
         {
             "name": "foostart/package-filemanager",

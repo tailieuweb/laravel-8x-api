@@ -185,6 +185,7 @@ return [
         Foostart\Filemanager\FilemanagerServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
         Foostart\Pexcel\PexcelServiceProvider::class,
+        Foostart\Checklist\ChecklistServiceProvider::class,
         Maatwebsite\Excel\ExcelServiceProvider::class,
 
 ],

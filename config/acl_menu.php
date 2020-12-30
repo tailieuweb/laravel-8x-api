@@ -109,5 +109,12 @@ return [
                 "link"        => '/admin/pexcels',
                 "permissions" => [$admin]
             ],
+            //Checklist
+            [
+                "name"        => 'checklist-admin.menus.top-menu',
+                "route"       => "checklists",
+                "link"        => '/admin/checklists',
+                "permissions" => [$admin]
+            ],
     ]
 ];
