@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Dec 28, 2020 at 07:59 AM
+-- Generation Time: Dec 30, 2020 at 07:28 AM
 -- Server version: 5.7.31-log
 -- PHP Version: 7.4.9
 
@@ -122,9 +122,9 @@ CREATE TABLE IF NOT EXISTS `groups` (
 --
 
 INSERT INTO `groups` (`id`, `name`, `permissions`, `protected`, `created_at`, `updated_at`) VALUES
-(1, 'superadmin', '{\"_superadmin\":1}', 0, '2020-12-27 21:38:50', '2020-12-27 21:38:50'),
-(2, 'editor', '{\"_user-editor\":1,\"_group-editor\":1}', 0, '2020-12-27 21:38:50', '2020-12-27 21:38:50'),
-(3, 'base admin', '{\"_user-editor\":1}', 0, '2020-12-27 21:38:50', '2020-12-27 21:38:50');
+(1, 'superadmin', '{\"_superadmin\":1}', 0, '2020-12-30 00:26:09', '2020-12-30 00:26:09'),
+(2, 'editor', '{\"_user-editor\":1,\"_group-editor\":1}', 0, '2020-12-30 00:26:09', '2020-12-30 00:26:09'),
+(3, 'base admin', '{\"_user-editor\":1}', 0, '2020-12-30 00:26:09', '2020-12-30 00:26:09');
 
 -- --------------------------------------------------------
 
@@ -164,10 +164,9 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 DROP TABLE IF EXISTS `password_resets`;
 CREATE TABLE IF NOT EXISTS `password_resets` (
   `email` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `token` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NOT NULL,
-  KEY `password_resets_email_index` (`email`),
-  KEY `password_resets_token_index` (`token`)
+  `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  KEY `password_resets_email_index` (`email`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -194,11 +193,11 @@ CREATE TABLE IF NOT EXISTS `permission` (
 --
 
 INSERT INTO `permission` (`id`, `overview`, `description`, `url`, `permission`, `protected`, `created_at`, `updated_at`) VALUES
-(1, '', 'superadmin', '', '_superadmin', 0, '2020-12-27 21:38:50', '2020-12-27 21:38:50'),
-(2, '', 'user editor', '', '_user-editor', 0, '2020-12-27 21:38:50', '2020-12-27 21:38:50'),
-(3, '', 'group editor', '', '_group-editor', 0, '2020-12-27 21:38:50', '2020-12-27 21:38:50'),
-(4, '', 'permission editor', '', '_permission-editor', 0, '2020-12-27 21:38:50', '2020-12-27 21:38:50'),
-(5, '', 'profile type editor', '', '_profile-editor', 0, '2020-12-27 21:38:50', '2020-12-27 21:38:50');
+(1, '', 'superadmin', '', '_superadmin', 0, '2020-12-30 00:26:09', '2020-12-30 00:26:09'),
+(2, '', 'user editor', '', '_user-editor', 0, '2020-12-30 00:26:09', '2020-12-30 00:26:09'),
+(3, '', 'group editor', '', '_group-editor', 0, '2020-12-30 00:26:09', '2020-12-30 00:26:09'),
+(4, '', 'permission editor', '', '_permission-editor', 0, '2020-12-30 00:26:09', '2020-12-30 00:26:09'),
+(5, '', 'profile type editor', '', '_profile-editor', 0, '2020-12-30 00:26:09', '2020-12-30 00:26:09');
 
 -- --------------------------------------------------------
 
@@ -227,17 +226,7 @@ CREATE TABLE IF NOT EXISTS `posts` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`post_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Dumping data for table `posts`
---
-
-INSERT INTO `posts` (`post_id`, `user_id`, `user_email`, `user_full_name`, `category_id`, `slideshow_id`, `post_name`, `post_slug`, `post_overview`, `post_description`, `post_image`, `post_files`, `post_status`, `cache_comments`, `cache_other_posts`, `cache_time`, `created_at`, `updated_at`) VALUES
-(1, 1, 'admin@admin.com', ' ', NULL, NULL, 'my post here', 'my-post-here', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.<img class=\"\" src=\"/photos/1/6ad1e031c2ac0f2941e0335ebfe53fd2.jpg\" alt=\"\" width=\"800\" height=\"800\" /></p>', '/photos/1/6ad1e031c2ac0f2941e0335ebfe53fd2.jpg', '[]', 99, NULL, NULL, NULL, '2020-12-27 21:52:52', '2020-12-27 21:52:52'),
-(2, 1, 'admin@admin.com', ' ', NULL, NULL, 'my post here 1', 'my-post-here-1', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.<img class=\"\" src=\"/photos/1/6ad1e031c2ac0f2941e0335ebfe53fd2.jpg\" alt=\"\" width=\"800\" height=\"800\" /></p>', '/photos/1/6ad1e031c2ac0f2941e0335ebfe53fd2.jpg', '[]', 99, NULL, NULL, NULL, '2020-12-27 21:53:02', '2020-12-27 21:53:02'),
-(3, 1, 'admin@admin.com', ' ', NULL, NULL, 'asdfasdf asdfa sdfasdf asd', 'asdfasdf-asdfa-sdfasdf-asd', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>', '/photos/1/EER-2.jpg', '[]', 99, NULL, NULL, NULL, '2020-12-27 23:25:13', '2020-12-27 23:25:13'),
-(4, 1, 'admin@admin.com', ' ', NULL, NULL, 'test test test test', 'test-test-test-test', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.<img class=\"\" src=\"/photos/1/6ad1e031c2ac0f2941e0335ebfe53fd2.jpg\" alt=\"\" width=\"800\" height=\"800\" /></p>', '/photos/1/6ad1e031c2ac0f2941e0335ebfe53fd2.jpg', '[]', 99, NULL, NULL, NULL, '2020-12-28 00:36:25', '2020-12-28 00:36:25');
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -383,7 +372,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `email`, `password`, `permissions`, `activated`, `banned`, `activation_code`, `activated_at`, `last_login`, `persist_code`, `reset_password_code`, `protected`, `created_at`, `updated_at`) VALUES
-(1, 'admin@admin.com', '$2y$10$mvxXGw//xlfW0MqFbromyOJQJmPDYtv9ivkk8ZRDIhQqp3jdPkyrm', NULL, 1, 0, NULL, NULL, '2020-12-27 21:45:26', '$2y$10$flDlAq8o/T5I7SLN7PaQ5OzitXOf8zwLuCJhOjHBHyg.A0yqs48xS', NULL, 0, '2020-12-27 21:38:50', '2020-12-27 21:45:26');
+(1, 'admin@admin.com', '$2y$10$ZbDJVVBMkFtpS4AOCD3FYuXtmxsmlypWvsvZrKHPp5chAbP2KzFvK', NULL, 1, 0, NULL, NULL, '2020-12-30 00:26:52', '$2y$10$t/vN8x/zvIwAL30jezYiIuJNBSUoUwkP873gerzdqnBSI.kRj9Wgi', NULL, 0, '2020-12-30 00:26:09', '2020-12-30 00:26:52');
 
 -- --------------------------------------------------------
 
@@ -438,7 +427,7 @@ CREATE TABLE IF NOT EXISTS `user_profile` (
 --
 
 INSERT INTO `user_profile` (`id`, `user_id`, `code`, `vat`, `first_name`, `last_name`, `phone`, `state`, `city`, `country`, `sex`, `category_id`, `address`, `avatar`, `created_at`, `updated_at`) VALUES
-(1, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-12-27 21:38:50', '2020-12-27 21:38:50');
+(1, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-12-30 00:26:09', '2020-12-30 00:26:09');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

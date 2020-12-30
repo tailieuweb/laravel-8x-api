@@ -393,16 +393,16 @@
         },
         {
             "name": "egulias/email-validator",
-            "version": "2.1.24",
+            "version": "2.1.25",
             "source": {
                 "type": "git",
                 "url": "https://github.com/egulias/EmailValidator.git",
-                "reference": "ca90a3291eee1538cd48ff25163240695bd95448"
+                "reference": "0dbf5d78455d4d6a41d186da50adc1122ec066f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/ca90a3291eee1538cd48ff25163240695bd95448",
-                "reference": "ca90a3291eee1538cd48ff25163240695bd95448",
+                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/0dbf5d78455d4d6a41d186da50adc1122ec066f4",
+                "reference": "0dbf5d78455d4d6a41d186da50adc1122ec066f4",
                 "shasum": ""
             },
             "require": {
@@ -449,7 +449,7 @@
             ],
             "support": {
                 "issues": "https://github.com/egulias/EmailValidator/issues",
-                "source": "https://github.com/egulias/EmailValidator/tree/2.1.24"
+                "source": "https://github.com/egulias/EmailValidator/tree/2.1.25"
             },
             "funding": [
                 {
@@ -457,7 +457,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-11-14T15:56:27+00:00"
+            "time": "2020-12-29T14:50:06+00:00"
         },
         {
             "name": "fideloper/proxy",
@@ -519,16 +519,16 @@
         },
         {
             "name": "foostart/package-acl",
-            "version": "8.0.4",
+            "version": "8.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/foostart/package-acl.git",
-                "reference": "685eda82518587eadb02e4e0047fb1e94e23b9e4"
+                "reference": "0f148e721e466bcadde65ff1d816b0a77dcbc120"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/foostart/package-acl/zipball/685eda82518587eadb02e4e0047fb1e94e23b9e4",
-                "reference": "685eda82518587eadb02e4e0047fb1e94e23b9e4",
+                "url": "https://api.github.com/repos/foostart/package-acl/zipball/0f148e721e466bcadde65ff1d816b0a77dcbc120",
+                "reference": "0f148e721e466bcadde65ff1d816b0a77dcbc120",
                 "shasum": ""
             },
             "require": {
@@ -577,9 +577,9 @@
             ],
             "support": {
                 "issues": "https://github.com/foostart/package-acl/issues",
-                "source": "https://github.com/foostart/package-acl/tree/8.0.4"
+                "source": "https://github.com/foostart/package-acl/tree/8.0.5"
             },
-            "time": "2020-12-23T04:11:15+00:00"
+            "time": "2020-12-28T04:44:26+00:00"
         },
         {
             "name": "foostart/package-category",
@@ -625,16 +625,16 @@
         },
         {
             "name": "foostart/package-filemanager",
-            "version": "8.0.0",
+            "version": "8.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/foostart/package-filemanager.git",
-                "reference": "fe710b0d7fa072ceebb9b7784e21d3dad48cea9a"
+                "reference": "3bf781596178f047ad9b02ea698b15a504031af6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/foostart/package-filemanager/zipball/fe710b0d7fa072ceebb9b7784e21d3dad48cea9a",
-                "reference": "fe710b0d7fa072ceebb9b7784e21d3dad48cea9a",
+                "url": "https://api.github.com/repos/foostart/package-filemanager/zipball/3bf781596178f047ad9b02ea698b15a504031af6",
+                "reference": "3bf781596178f047ad9b02ea698b15a504031af6",
                 "shasum": ""
             },
             "require": {
@@ -694,9 +694,9 @@
             ],
             "support": {
                 "issues": "https://github.com/foostart/package-filemanager/issues",
-                "source": "https://github.com/foostart/package-filemanager/tree/8.0.0"
+                "source": "https://github.com/foostart/package-filemanager/tree/8.0.1"
             },
-            "time": "2020-12-27T03:39:12+00:00"
+            "time": "2020-12-29T08:09:38+00:00"
         },
         {
             "name": "foostart/package-pexcel",
@@ -6119,16 +6119,16 @@
         },
         {
             "name": "facade/ignition",
-            "version": "2.5.3",
+            "version": "2.5.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/facade/ignition.git",
-                "reference": "d8dc4f90ed469f9f9313b976fb078c20585d5c99"
+                "reference": "8e907d81244649c5ea746e2ec30c32c5f59df472"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/facade/ignition/zipball/d8dc4f90ed469f9f9313b976fb078c20585d5c99",
-                "reference": "d8dc4f90ed469f9f9313b976fb078c20585d5c99",
+                "url": "https://api.github.com/repos/facade/ignition/zipball/8e907d81244649c5ea746e2ec30c32c5f59df472",
+                "reference": "8e907d81244649c5ea746e2ec30c32c5f59df472",
                 "shasum": ""
             },
             "require": {
@@ -6192,7 +6192,7 @@
                 "issues": "https://github.com/facade/ignition/issues",
                 "source": "https://github.com/facade/ignition"
             },
-            "time": "2020-12-09T20:25:45+00:00"
+            "time": "2020-12-29T09:12:55+00:00"
         },
         {
             "name": "facade/ignition-contracts",
