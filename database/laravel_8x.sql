@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Dec 30, 2020 at 07:28 AM
+-- Generation Time: Dec 30, 2020 at 08:19 AM
 -- Server version: 5.7.31-log
 -- PHP Version: 7.4.9
 
@@ -68,6 +68,61 @@ INSERT INTO `categories` (`category_id`, `category_id_parent`, `category_id_pare
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `checklists`
+--
+
+DROP TABLE IF EXISTS `checklists`;
+CREATE TABLE IF NOT EXISTS `checklists` (
+  `checklist_id` int(11) NOT NULL AUTO_INCREMENT,
+  `check_id` int(11) DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `context_id` int(11) DEFAULT NULL,
+  `context_type` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` tinyint(4) DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`checklist_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `checks`
+--
+
+DROP TABLE IF EXISTS `checks`;
+CREATE TABLE IF NOT EXISTS `checks` (
+  `check_id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) DEFAULT NULL,
+  `category_id` int(11) DEFAULT NULL,
+  `check_name` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `check_overview` varchar(500) CHARACTER SET utf8 DEFAULT NULL,
+  `check_description` text CHARACTER SET utf8,
+  `check_slug` varchar(1000) CHARACTER SET utf8 DEFAULT NULL,
+  `check_image` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `check_files` varchar(10000) CHARACTER SET utf8 DEFAULT NULL,
+  `redmine_id` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `redmine_url` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `check_status` tinyint(4) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`check_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `checks`
+--
+
+INSERT INTO `checks` (`check_id`, `user_id`, `category_id`, `check_name`, `check_overview`, `check_description`, `check_slug`, `check_image`, `check_files`, `redmine_id`, `redmine_url`, `check_status`, `created_at`, `updated_at`) VALUES
+(1, 9999, NULL, 'Bài 1: Giới thiệu Laravel111', 'sdfg sdfg ssdfg sdfg ssdfg sdfg s', '<p>sdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg s</p>', NULL, '/photos/9999/test/5ab1cee1a4aa4.jpeg', '[\"\\/files\\/9999\\/asdf\\/5ab3285de870c.pdf\"]', NULL, NULL, 99, '2018-03-25 21:50:51', '2018-04-05 00:15:35'),
+(2, 9999, NULL, 'Bài 1: Giới thiệu Laravel', 'sdfg sdfg ssdfg sdfg ssdfg sdfg s', '<p>sdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg s</p>', NULL, NULL, '[]', NULL, NULL, 99, '2018-04-05 00:15:06', '2018-04-05 00:15:06'),
+(3, 9999, NULL, 'Bài 1: Giới thiệu Laravel222', 'sdfg sdfg ssdfg sdfg ssdfg sdfg s', '<p>sdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg s</p>', NULL, '/photos/9999/test/5ab1cee1a4aa4.jpeg', '[\"\\/files\\/9999\\/asdf\\/5ab3285de870c.pdf\"]', NULL, NULL, 99, '2018-04-05 00:15:47', '2018-04-05 00:15:47'),
+(4, 1, NULL, NULL, NULL, NULL, NULL, NULL, '[\"\\/files\\/1\\/test1.xlsx\"]', '12312', 'Lorem ipsum dolor sit amet, conse', NULL, '2020-12-30 01:14:19', '2020-12-30 01:14:19');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `contexts`
 --
 
@@ -84,7 +139,7 @@ CREATE TABLE IF NOT EXISTS `contexts` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`context_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `contexts`
@@ -97,7 +152,8 @@ INSERT INTO `contexts` (`context_id`, `context_name`, `context_key`, `context_re
 (4, 'Posts', 'c09ae13b96c65a5a04b76ea7ac', 'admin/posts', 1, NULL, 9999, 'Lê Super Admin', '2018-03-26 00:53:36', '2018-03-26 00:53:36'),
 (5, 'Slideshow', 'c631a3702ccf1b1256e6c85b54c67', 'admin/slideshows', 1, NULL, 9999, 'Lê Super Admin', '2018-03-26 23:38:23', '2018-03-26 23:38:23'),
 (6, 'main_menu', 'b0604e17bfb90d494a55bdd97e0bb', 'main_menu', 1, NULL, 9999, 'Lê Super Admin', '2018-04-01 19:50:29', '2018-04-01 19:50:29'),
-(7, 'admin/api', '0bcaf86a21a138d94a8428b6ed', 'admin/api', NULL, NULL, 9999, 'Lê Super Admin', '2018-04-09 01:32:56', '2018-04-09 01:32:56');
+(7, 'admin/api', '0bcaf86a21a138d94a8428b6ed', 'admin/api', NULL, NULL, 9999, 'Lê Super Admin', '2018-04-09 01:32:56', '2018-04-09 01:32:56'),
+(8, 'admin/checklists', '2ece7878a9f4bd71235e51', 'admin/checklists', 99, NULL, 1, ' ', '2020-12-30 00:46:40', '2020-12-30 00:46:40');
 
 -- --------------------------------------------------------
 
@@ -198,6 +254,40 @@ INSERT INTO `permission` (`id`, `overview`, `description`, `url`, `permission`, 
 (3, '', 'group editor', '', '_group-editor', 0, '2020-12-30 00:26:09', '2020-12-30 00:26:09'),
 (4, '', 'permission editor', '', '_permission-editor', 0, '2020-12-30 00:26:09', '2020-12-30 00:26:09'),
 (5, '', 'profile type editor', '', '_profile-editor', 0, '2020-12-30 00:26:09', '2020-12-30 00:26:09');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pexcels`
+--
+
+DROP TABLE IF EXISTS `pexcels`;
+CREATE TABLE IF NOT EXISTS `pexcels` (
+  `pexcel_id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) DEFAULT NULL,
+  `user_email` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `user_full_name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `category_id` int(11) DEFAULT NULL,
+  `pexcel_name` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `pexcel_overview` varchar(500) CHARACTER SET utf8 DEFAULT NULL,
+  `pexcel_description` text CHARACTER SET utf8,
+  `pexcel_slug` varchar(1000) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `pexcel_image` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `pexcel_files` varchar(10000) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `pexcel_status` tinyint(4) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`pexcel_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `pexcels`
+--
+
+INSERT INTO `pexcels` (`pexcel_id`, `user_id`, `user_email`, `user_full_name`, `category_id`, `pexcel_name`, `pexcel_overview`, `pexcel_description`, `pexcel_slug`, `pexcel_image`, `pexcel_files`, `pexcel_status`, `created_at`, `updated_at`) VALUES
+(1, 9999, 'admin@admin.com', 'Lê Super Admin', NULL, 'Bài 1: Giới thiệu Laravel111', 'sdfg sdfg ssdfg sdfg ssdfg sdfg s', '<p>sdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg s</p>', NULL, '/photos/9999/test/5ab1cee1a4aa4.jpeg', '[\"\\/files\\/9999\\/asdf\\/5ab3285de870c.pdf\"]', 99, '2018-03-25 21:50:51', '2018-04-05 00:15:35'),
+(2, 9999, 'admin@admin.com', 'Lê Super Admin', NULL, 'Bài 1: Giới thiệu Laravel', 'sdfg sdfg ssdfg sdfg ssdfg sdfg s', '<p>sdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg s</p>', NULL, NULL, '[]', 99, '2018-04-05 00:15:06', '2018-04-05 00:15:06'),
+(3, 9999, 'admin@admin.com', 'Lê Super Admin', NULL, 'Bài 1: Giới thiệu Laravel222', 'sdfg sdfg ssdfg sdfg ssdfg sdfg s', '<p>sdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg ssdfg sdfg s</p>', NULL, '/photos/9999/test/5ab1cee1a4aa4.jpeg', '[\"\\/files\\/9999\\/asdf\\/5ab3285de870c.pdf\"]', 99, '2018-04-05 00:15:47', '2018-04-05 00:15:47');
 
 -- --------------------------------------------------------
 
