@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f617476be375d5b4c210a731706882e2",
+    "content-hash": "a0feceee996e7920f46a8bdb51ad9275",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -743,6 +743,52 @@
                 "source": "https://github.com/foostart/package-post/tree/master"
             },
             "time": "2020-02-21T09:38:57+00:00"
+        },
+        {
+            "name": "foostart/package-product",
+            "version": "8.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/foostart/package-product.git",
+                "reference": "23ba0e142e297bb0f1a681af967943e6c17e4646"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/foostart/package-product/zipball/23ba0e142e297bb0f1a681af967943e6c17e4646",
+                "reference": "23ba0e142e297bb0f1a681af967943e6c17e4646",
+                "shasum": ""
+            },
+            "require": {
+                "foostart/package-filemanager": "*",
+                "foostart/package-slideshow": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Foostart\\Product\\": "/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "FooStart",
+                    "email": "foostart.com@gmail.com",
+                    "homepage": "http://foostart.com"
+                }
+            ],
+            "description": "Manage product",
+            "keywords": [
+                "foostart",
+                "laravel 5 package product"
+            ],
+            "support": {
+                "issues": "https://github.com/foostart/package-product/issues",
+                "source": "https://github.com/foostart/package-product/tree/8.0.1"
+            },
+            "time": "2020-12-29T15:12:06+00:00"
         },
         {
             "name": "foostart/package-sentry",

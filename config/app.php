@@ -183,6 +183,7 @@ return [
         Foostart\Post\PostServiceProvider::class,
         Foostart\Slideshow\SlideshowServiceProvider::class,
         Foostart\Filemanager\FilemanagerServiceProvider::class,
+        Foostart\Product\ProductServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
 
     ],

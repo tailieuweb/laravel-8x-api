@@ -102,5 +102,12 @@ return [
                 "link"        => '/admin/slideshows',
                 "permissions" => [$admin]
             ],
+            //Product
+            [
+                "name"        => 'product-admin.menus.top-menu',
+                "route"       => "products",
+                "link"        => '/admin/products',
+                "permissions" => [$admin]
+            ],
     ]
 ];
