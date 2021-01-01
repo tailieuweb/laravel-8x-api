@@ -519,16 +519,16 @@
         },
         {
             "name": "foostart/package-acl",
-            "version": "8.0.4",
+            "version": "8.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/foostart/package-acl.git",
-                "reference": "685eda82518587eadb02e4e0047fb1e94e23b9e4"
+                "reference": "0f148e721e466bcadde65ff1d816b0a77dcbc120"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/foostart/package-acl/zipball/685eda82518587eadb02e4e0047fb1e94e23b9e4",
-                "reference": "685eda82518587eadb02e4e0047fb1e94e23b9e4",
+                "url": "https://api.github.com/repos/foostart/package-acl/zipball/0f148e721e466bcadde65ff1d816b0a77dcbc120",
+                "reference": "0f148e721e466bcadde65ff1d816b0a77dcbc120",
                 "shasum": ""
             },
             "require": {
@@ -577,9 +577,9 @@
             ],
             "support": {
                 "issues": "https://github.com/foostart/package-acl/issues",
-                "source": "https://github.com/foostart/package-acl/tree/8.0.4"
+                "source": "https://github.com/foostart/package-acl/tree/8.0.5"
             },
-            "time": "2020-12-23T04:11:15+00:00"
+            "time": "2020-12-28T04:44:26+00:00"
         },
         {
             "name": "foostart/package-category",
