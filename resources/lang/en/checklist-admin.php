@@ -47,7 +47,7 @@ return [
     |
     */
     'columns' => [
-        'name' => 'Task name',
+        'name' => 'Check name',
         'operations' => 'Operations',
         'updated_at' => 'Updated at',
         'filename' => 'File name',
@@ -60,7 +60,7 @@ return [
         'status' => 'Status',
         '#' => '#',
         'url' => 'Url',
-        'task_id' => 'Redmine ID',
+        'task_id' => 'Check ID',
         'task_url' => 'Redmine URL',
         'rule_name' => 'Rule name',
         'operations' => 'Operations',
