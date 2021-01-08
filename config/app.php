@@ -161,6 +161,8 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
+
 
         /*
          * Package Service Providers...
@@ -174,7 +176,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        
+        Dingo\Api\Provider\LaravelServiceProvider::class,
         /**
          * My packages
          */
@@ -184,6 +186,9 @@ return [
         Foostart\Slideshow\SlideshowServiceProvider::class,
         Foostart\Filemanager\FilemanagerServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
+        Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
+
+       
 ],
 
     /*
@@ -240,6 +245,12 @@ return [
          * My aliases
          */
         'Image' => Intervention\Image\Facades\Image::class,
+        'API' => Dingo\Api\Facade\API::class,
+        'ApiRoute' => Dingo\Api\Facade\Route::class
+
+
+      
+        
 
     ],
 

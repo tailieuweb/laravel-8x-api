@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DingoAPIConTroller;
+use App\Http\Controllers\ArticleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +18,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+// Route::get('/admin/dingo','App\Http\Controllers\DingoAPIConTroller@index');
+// Route::get('/admin/articles', 'App\Http\Controllers\ArticleController@index');

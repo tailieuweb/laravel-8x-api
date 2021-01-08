@@ -102,5 +102,13 @@ return [
                 "link"        => '/admin/slideshows',
                 "permissions" => [$admin]
             ],
+
+            //Dingo API
+            [
+                "name"        => 'Dingo API',
+                "route"       => "dingo",
+                "link"        => '/admin/dingo',
+                "permissions" => [$admin]
+            ],
     ]
 ];

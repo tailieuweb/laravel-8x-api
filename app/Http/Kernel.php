@@ -65,6 +65,7 @@ class Kernel extends HttpKernel
         /**
          * My middleware
          */
+
         'admin_logged' => \Foostart\Acl\Http\Middleware\AdminLogged::class,
         'logged' => \Foostart\Acl\Http\Middleware\Logged::class,
         'can_see' => \Foostart\Acl\Http\Middleware\CanSee::class,
