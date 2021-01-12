@@ -10,15 +10,13 @@
                         <div class="row no-margin">
                             <div class="our-college-sidebar col-4 col-md-4 col-sm-12 col-xs-12">
                                 <article>
-                                    <h3>Library</h3>
-                                    <p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei. Saepe tantas ocurreret duo ea, has facilisi vulputate an</p>
-                                    <a href="#">See more</a>
-                                </article>
-
-                                <article>
-                                    <h3>Online course</h3>
-                                    <p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei. Saepe tantas ocurreret duo ea, has facilisi vulputate an</p>
-                                    <a href="#">See more</a>
+                                    <h3>Thông tin tuyển sinh TDC</h3>
+                                    <p>Tin tức</p>
+                                    <p>Ngành học tại TDC</p>
+                                    <p>Lý do chọn TDC</p>
+                                    <p>Cơ hội việc làm</p>
+                                    <p>Trắc nghiệm định hướng nghề nghiệp</p>
+                                    <p>Một số câu hỏi thường gặp</p>
                                 </article>
                             </div>
 
@@ -26,7 +24,7 @@
 
 
                                 <section class="events flexslider" style="height: 458px;">
-                                    <h3>Products</h3>
+                                    <h3>Thông báo - Tin tức</h3>
                                     <ul class="swiper-container content-list">
                                          <div class="swiper-wrapper">
                                              <?php for ($i = 0; $i < $products->count(); $i++): ?>

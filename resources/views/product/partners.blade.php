@@ -2,6 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="swiper-container partner-list">
+                <span style="    margin-left: 41px;    font-size: 25px;    font-weight: bold;">Đối tác</span>
                 <div class="swiper-wrapper">
                     <!-- image 1-->
                     <div class="swiper-slide">

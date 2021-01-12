@@ -21,17 +21,20 @@ class Controller extends BaseController
         return $randomString;
     }
     
-    public function curlProduct($params) {
-        $crl = curl_init($params['url']);
+    public function curlProduct($params) {    
+        $data = [
+          'name'  => @$params['name'],
+          'detail'  => @$params['detail']
+        ];
+        $url = rtrim($params['url'],"?") . "?" . http_build_query($data);
+
+        $crl = curl_init($url);
         $header = array();
         $header[] = 'Content-length: 0';
         $header[] = 'Content-type: application/json';
         $header[] = 'Authorization: Bearer '.$params['token'];
         
-        $data = [
-          'name'  => @$params['name'],
-          'detail'  => @$params['detail']
-        ];
+        curl_setopt($crl, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($crl, CURLOPT_HTTPHEADER,$header);
         curl_setopt($crl, CURLOPT_POST,true);
         curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);

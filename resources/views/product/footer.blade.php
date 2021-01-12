@@ -3,25 +3,24 @@
         <div class="row footerblocks">
             <div class="footer-col col-md-3 col-sm-12">
                 <div class="footer-col-inner">
-                    <h3>About Us</h3>
+                    <h3>Phòng ban</h3>
                     <ul>
                         <li>
-                            <a href="#"><i class="fa fa-caret-right"></i>
-                                About Gourmet
+                            <a href="#"><i class="fa fa-caret-right"></i>Phòng hợp tác doanh nghiệp
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <i class="fa fa-caret-right"></i>Premium Moodle Themes</a>
+                                <i class="fa fa-caret-right"></i>Phòng đào tạo</a>
                         </li>
                         <li>
                             <a href="#">
-                                <i class="fa fa-caret-right"></i>E-learning Blog
+                                <i class="fa fa-caret-right"></i>Phòng tuyển sinh
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <i class="fa fa-caret-right"></i>Contact us
+                                <i class="fa fa-caret-right"></i>Phòng hành chính
                             </a>
                         </li>
                     </ul>
@@ -29,34 +28,30 @@
             </div><!--//foooter-col-->
             <div class="footer-col col-md-6 col-sm-12">
                 <div class="footer-col-inner">
-                    <h3>More info</h3>
+                    <h3>Giới thiệu</h3>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Sed eu nisl ut tortor imperdiet feugiat ut consequat diam.
-                        Praesent id lorem ante. Sed lobortis bibendum ante, in placerat justo rhoncus vitae.
-                        In eu imperdiet mi. Aliquam erat volutpat. Morbi molestie augue dui, vel dignissim mi rutrum et.
-                        Fusce convallis, nisl ut faucibus aliquet, elit ligula vestibulum est, in malesuada velit sem id risus.
+                        Trường Cao đẳng Công nghệ Thủ Ðức với sứ mạng: “Đào tạo nguồn nhân lực có đạo đức và năng lực, yêu nghề, sáng tạo, biết tự khẳng định giá trị, giữ gìn truyền thống văn hóa dân tộc, có ý thức học tập suốt đời”.
                     </p>
                 </div><!--//footer-col-inner-->
             </div><!--//foooter-col-->
             <div class="footer-col col-md-3 col-sm-12">
                 <div class="footer-col-inner">
-                    <h3>Contact us</h3>
+                    <h3>Liên hệ</h3>
                     <div class="row">
                         <p class="adr clearfix col-md-12 col-sm-4">
                             <i class="fa fa-map-marker pull-left"></i>
-                            <span class="pull-left"><span>College Green</span><br>
-                                <span>56 College Green Road</span><br>
-                                <span>BS16 AP18</span><br>
-                                <span>UK</span></span>
+                            <span class="pull-left" id="yui_3_17_2_1_1610437816731_37">
+                                        <span>53 Võ Văn Ngân, Phường Linh Chiểu </span><br>
+                                        <span id="yui_3_17_2_1_1610437816731_36">Quận Thủ Đức, Tp.HCM</span><br>
+                                    </span>
                         </p>
                         <p class="tel col-md-12 col-sm-4">
-                            <i class="fa fa-phone"></i>0800 123 4567
-                        </p>
+                                    <i class="fa fa-phone"></i>(028)22 158 642 - Fax: (028)38 962 474
+                                </p>
                         <p class="col-md-12 col-sm-4">
-                            <i class="fa fa-envelope"></i>
-                            <a href="#">enquires@website.com</a>
-                        </p>
+                                    <i class="fa fa-envelope"></i>
+                                    <a href="#">fit@tdc.edu.vn</a>
+                                </p>
                     </div>
                 </div><!--//footer-col-inner-->
             </div><!--//foooter-col-->
@@ -67,7 +62,7 @@
         <div class="container">
             <div class="row">
                 <small class="copyright col-md-6 col-sm-12 col-xs-12">
-                    <p class="copy">© 2016 3rd Wave Media</p></small>
+                    <p class="copy">© 2021 Nguyễn Mạnh Sơn</p></small>
                 <ul class="social pull-right col-md-6 col-sm-12 col-xs-12">
                     <li>
                         <a href="#">

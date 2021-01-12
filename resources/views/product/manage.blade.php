@@ -22,8 +22,8 @@
                                 <div id="text-7" class="widget">		
                                     <div>
                                         <hr>
-                                        <h5>Upcoming Courses</h5>
-                                        <p>Suspendisse quis risus turpis, ut pharetra arcu. Donec adipiscing, quam non faucibus luctus, mi arcu blandit diam, at faucibus mi ante vel augue.</p>
+                                        <h5>Thành viên sử dụng key để tương tác</h5>
+                                        <p>Quản lý thành viên</p>
 
                                     </div>
                                 </div>          
@@ -38,14 +38,22 @@
                                         <button class="btn-filter"><i class="fa fa-bars" aria-hidden="true"></i> Filter</button>
                                     </div>
                                 </div>
-                                <table class="table table-responsive table-striped">
+                                <table class="table table-responsive table-striped" style="display: block">
                                     <thead>
 
                                         <tr class="filters">
-                                            <th><input type="text" class="form-control" placeholder="Id" disabled=""></th>
-                                            <th><input type="text" class="form-control" placeholder="Name" disabled=""></th>
-                                            <th><input type="text" class="form-control" placeholder="Email" disabled=""></th>
-                                            <th><input type="text" class="form-control" placeholder="Token" disabled=""></th>
+                                            <th>
+                                                <span  class="">Id</span>
+                                            </th>
+                                            <th>
+                                                <span  class="">Name</span>
+                                            </th>
+                                            <th>
+                                                <span  class="">Email</span>
+                                            </th>
+                                            <th>
+                                                <span  class="">Key</span>
+                                            </th>
                                         </tr>
 
                                     </thead>

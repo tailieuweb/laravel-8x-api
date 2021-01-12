@@ -40,10 +40,11 @@ class ProductController extends BaseController
     public function store(Request $request)
     {
         $input = $request->all();
-        $input = [
-            'name'   => $this->generateRandomString(),
-            'detail' => $this->generateRandomString(100)
-        ];
+        
+//        $input = [
+//            'name'   => $this->generateRandomString(),
+//            'detail' => $this->generateRandomString(100)
+//        ];
         $validator = Validator::make($input, [
             'name' => 'required',
             'detail' => 'required'
