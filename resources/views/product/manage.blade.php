@@ -23,8 +23,6 @@
                                     <div>
                                         <hr>
                                         <h5>Thành viên sử dụng key để tương tác</h5>
-                                        <p>Quản lý thành viên</p>
-
                                     </div>
                                 </div>          
                             </div>

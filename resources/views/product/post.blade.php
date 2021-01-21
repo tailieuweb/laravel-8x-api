@@ -11,21 +11,21 @@
     <div class="event-page">
         <div class="leave-reply">
             <!--TITLE/-->
-            <h2>Send post</h2>
+            <h2>Đăng bài</h2>
             <!--END TITLE/-->
             <form action="/post" method="POST">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}" />
                 <div class="row-fluid">
                     <div class="col-md-12 text-content">
                         <div class="row">
-                            <input name="name" type="text" placeholder="Title">
+                            <input name="name" type="text" placeholder="Tiêu đề">
                         </div>
                     </div>
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="row">
-                            <textarea name="detail" placeholder="Data" cols="" rows=""></textarea>
-                            <textarea name="token" placeholder="Token" cols="" rows=""></textarea>
-                            <button class="btn-style">Submit</button>
+                            <textarea name="detail" placeholder="Data" cols="" rows="5"></textarea>
+                            <textarea name="token" placeholder="Key" cols="" rows=""></textarea>
+                            <button class="btn-style">Gửi</button>
                         </div>
                     </div>
                 </div>

@@ -40,7 +40,7 @@ a:hover {
   outline: 1px solid #00a685;
 }
 .type-2048 .event-page .leave-reply form textarea {
-  height: 300px;
+  height: 150px;
   margin-left: 0;
   width: 100%;
   resize: none;

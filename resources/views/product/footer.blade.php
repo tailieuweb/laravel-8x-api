@@ -62,7 +62,7 @@
         <div class="container">
             <div class="row">
                 <small class="copyright col-md-6 col-sm-12 col-xs-12">
-                    <p class="copy">© 2021 Nguyễn Mạnh Sơn</p></small>
+                    <p class="copy">© 2021 Đặng Mạnh Sơn</p></small>
                 <ul class="social pull-right col-md-6 col-sm-12 col-xs-12">
                     <li>
                         <a href="#">

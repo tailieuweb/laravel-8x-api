@@ -8,7 +8,11 @@
         <!--HEADER-->
         <div class="module-1">
             <!--LOGO-->
-            <img src="{{ asset('/assets/images/logo.jpg') }}" alt=""/>
+            <span style="    color: white;    font-size: 20px;    margin: 20px;
+                  ">Trường Cao Đẳng Công Nghệ Thủ Đức</span>
+            <p style="
+    color: antiquewhite;
+">Bản tin Tuyền thông và Tư vấn tuyển sinh</p>
             <!--END LOGO-->
 
             <!--BUTTON MENU-->
@@ -21,10 +25,9 @@
             <!--MENU-->
             <div class="menu">
                <ul class="nav-menu collapse collapse-top-menu">
-                    <li class="item active"><a href="/"> Home </a></li>
-                    <li class="item"><a href="/manage"> Manage </a></li>
-                    <li class="item"><a href="/post"> Post </a></li>
-                    <li class="item"><a href="/about"> About </a></li>
+                    <li class="item active"><a href="/"> Trang chủ </a></li>
+                    <li class="item"><a href="/manage"> Quản trị </a></li>
+                    <li class="item"><a href="/post"> Đăng tin </a></li>                    
                 </ul>
             </div>
             <!--END MENU-->

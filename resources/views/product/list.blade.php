@@ -32,7 +32,7 @@
                                                  <li >
                                                      <?php for ($j = $i; ($j < $products->count()) && ($j < $i+3); $j++): ?>
                                                      <article>			
-                                                         <span class="date">28<span>Wed 2015</span></span>
+                                                         <span class="date">{{ $products[$j]->created_at->format('d') }}<span>{{ $products[$j]->created_at->format('m') }}-{{ $products[$j]->created_at->format('Y') }}</span></span>
                                                          <h3><a href="#"><?php echo $products[$j]->name; ?></a></h3>
                                                          <p><?php echo $products[$j]->detail; ?></p>
                                                      </article>
