@@ -131,6 +131,14 @@
       <path value="$PROJECT_DIR$/vendor/firebase/php-jwt" />
       <path value="$PROJECT_DIR$/vendor/phpseclib/phpseclib" />
       <path value="$PROJECT_DIR$/vendor/laravel/passport" />
+      <path value="$PROJECT_DIR$/vendor/foostart/package-acl" />
+      <path value="$PROJECT_DIR$/vendor/laravelcollective/html" />
+      <path value="$PROJECT_DIR$/vendor/gregwar/captcha" />
+      <path value="$PROJECT_DIR$/vendor/intervention/image" />
+      <path value="$PROJECT_DIR$/vendor/foostart/package-sentry" />
+      <path value="$PROJECT_DIR$/vendor/foostart/package-slideshow" />
+      <path value="$PROJECT_DIR$/vendor/foostart/package-category" />
+      <path value="$PROJECT_DIR$/vendor/foostart/package-post" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.3" />

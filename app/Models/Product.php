@@ -1,20 +1,14 @@
 <?php
-  
+
 namespace App\Models;
-  
+
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Foostart\Post\Models\Post;
 
-class Product extends Model
+class Product extends Post
 {
-    use HasFactory;
-  
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = [
-        'name', 'detail'
-    ];
+
+
+
 }

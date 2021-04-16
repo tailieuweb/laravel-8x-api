@@ -22,3 +22,14 @@ Route::get('/manage', [ProductController::class, 'manage']);
 Route::get('/post', [ProductController::class, 'post']);
 Route::post('/post', [ProductController::class, 'send']);
 Route::get('/about', [ProductController::class, 'about']);
+Route::get('/detail/{id}', [ProductController::class, 'detail']);
+
+Route::group(['middleware' => [],
+    'namespace' => 'App\Http\Controllers',
+], function () {
+    Route::get('/detail/{id}', [
+        'as' => 'detail',
+        'uses' => 'ProductController@detail'
+    ]);
+});
+

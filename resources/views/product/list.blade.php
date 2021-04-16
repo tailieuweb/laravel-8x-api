@@ -31,23 +31,23 @@
                                              <div class="swiper-slide">
                                                  <li >
                                                      <?php for ($j = $i; ($j < $products->count()) && ($j < $i+3); $j++): ?>
-                                                     <article>			
+                                                     <article>
                                                          <span class="date">{{ $products[$j]->created_at->format('d') }}<span>{{ $products[$j]->created_at->format('m') }}-{{ $products[$j]->created_at->format('Y') }}</span></span>
-                                                         <h3><a href="#"><?php echo $products[$j]->name; ?></a></h3>
-                                                         <p><?php echo $products[$j]->detail; ?></p>
+                                                         <h3><a href="{!! URL::route('detail', [   'id' => $products[$j]->post_id]) !!}"><?php echo $products[$j]->post_name; ?></a></h3>
+                                                         <p><?php echo $products[$j]->post_overview; ?></p>
                                                      </article>
                                                      <?php endfor; ?>
                                                  </li>
                                              </div>
                                                  <?php $i = $i+ 2; ?>
                                              <?php endfor; ?>
-                                       
-                                         
-                                        </div>	
-                                        				
+
+
+                                        </div>
+
 
                                     </ul>
-        
+
                                     <ul class="flex-direction-nav"><li><a href="#" class="flex-prev">Previous</a></li><li><a class="flex-next" href="#">Next</a></li></ul></section>
                             </div>
                         </div>

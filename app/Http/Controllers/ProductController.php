@@ -11,7 +11,7 @@ use App\Models\User;
 use App\Models\Product;
 use Illuminate\Support\Facades\Auth;
 use Validator;
-   
+
 
 use Illuminate\Http\Request;
 class ProductController extends Controller
@@ -21,10 +21,10 @@ class ProductController extends Controller
 
         return view('product.list', ['products' => $products]);
     }
-    
+
     public function manage() {
         $users = User::all();
-        
+
         $accounts = [];
         foreach ($users as $user) {
             $accounts[] = [
@@ -36,7 +36,7 @@ class ProductController extends Controller
         };
         return view('product.manage', ['accounts' => $accounts]);
     }
-    
+
     public function post() {
         return view('product.post', []);
     }
@@ -48,23 +48,29 @@ class ProductController extends Controller
         return redirect('/');
     }
     public function about() {
-        
+
     }
-    
+
     public function login($email, $password)
     {
-        if(Auth::attempt(['email' => $email, 'password' => $password])){ 
-            $user = Auth::user(); 
-            $success['token'] =  $user->createToken('MyApp')-> accessToken; 
+        if(Auth::attempt(['email' => $email, 'password' => $password])){
+            $user = Auth::user();
+            $success['token'] =  $user->createToken('MyApp')-> accessToken;
             $success['name'] =  $user->name;
             $success['status'] = '1';
-   
+
             return $success;
-        } 
-        else{ 
+        }
+        else{
             $success = [];
             $success['status'] = '0';
             return $success;
-        } 
+        }
+    }
+
+    public function detail(Request $request, int $id) {
+        $product = Product::find($id);
+
+        return view('product.detail', ['product' => $product]);
     }
 }
