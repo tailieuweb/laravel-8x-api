@@ -165,6 +165,12 @@ return [
         /*
          * Package Service Providers...
          */
+        Foostart\Acl\Authentication\AuthenticationServiceProvider::class,
+        Foostart\Category\CategoryServiceProvider::class,
+        Foostart\Post\PostServiceProvider::class,
+        Foostart\Slideshow\SlideshowServiceProvider::class,
+        Foostart\Filemanager\FilemanagerServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -226,6 +232,12 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+
+        /**
+         * Package Service
+         */
+        'Image' => Intervention\Image\Facades\Image::class,
+        'Input' => Illuminate\Support\Facades\Request::class,
 
     ],
 
