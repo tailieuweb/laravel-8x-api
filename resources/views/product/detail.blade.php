@@ -27,6 +27,7 @@
                                     <h3>Thông báo - Tin tức</h3>
 
                                     <h4>{!! $product->post_name !!}</h4>
+                                    <h5>{!! $category !!}</h5>
                                     <p>{!! $product->post_description !!}</p>
                                 </section>
                             </div>

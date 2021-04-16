@@ -31,5 +31,9 @@ Route::group(['middleware' => [],
         'as' => 'detail',
         'uses' => 'ProductController@detail'
     ]);
+    Route::get('/signuptoken', [
+        'as' => 'signuptoken',
+        'uses' => 'ProductController@signuptoken'
+    ]);
 });
 

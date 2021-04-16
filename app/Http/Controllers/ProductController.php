@@ -11,10 +11,12 @@ use App\Models\User;
 use App\Models\Product;
 use Illuminate\Support\Facades\Auth;
 use Validator;
-
+use Foostart\Category\Library\Controllers\FooController;
+use Foostart\Category\Models\Category;
+use View, Redirect, App, Config;
 
 use Illuminate\Http\Request;
-class ProductController extends Controller
+class ProductController extends FooController
 {
     public function index() {
         $products = Product::all();
@@ -69,8 +71,28 @@ class ProductController extends Controller
     }
 
     public function detail(Request $request, int $id) {
-        $product = Product::find($id);
 
-        return view('product.detail', ['product' => $product]);
+        $product = Product::find($id);
+        $user = $this->getUser($product->created_user_id);
+        $level = $user->user_profile();
+
+        $level_id = $level->first()->level_id;
+
+        $obj_category = new Category();
+        $params = ['id' => $level_id];
+        $category = $obj_category->selectItem($params);
+
+
+
+        return view('product.detail', ['product' => $product, 'category' => $category->category_name]);
+    }
+
+    public function signuptoken(Request $request) {
+
+        $enable_captcha = Config::get('acl_base.captcha_signup');
+        $captcha = App::make('captcha_validator');
+
+
+        return view('product.signuptoken', ['request' => $request, 'captcha' => $captcha]);
     }
 }
