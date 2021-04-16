@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -48,7 +51,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d8ddc50-d85a-4f22-b4a2-a67bc1eee9db" name="Default Changelist" comment="" />
+    <list default="true" id="2d8ddc50-d85a-4f22-b4a2-a67bc1eee9db" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bat-1-clear.bat" beforeDir="false" afterPath="$PROJECT_DIR$/1-clear.bat" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -192,6 +199,7 @@
       <path value="$PROJECT_DIR$/vendor/firebase/php-jwt" />
       <path value="$PROJECT_DIR$/vendor/phpseclib/phpseclib" />
       <path value="$PROJECT_DIR$/vendor/laravel/passport" />
+      <path value="$PROJECT_DIR$/vendor/foostart/package-acl" />
     </include_path>
   </component>
   <component name="ProjectId" id="1nMyiOTvRMNbn36kM146Ra0CYOW" />
