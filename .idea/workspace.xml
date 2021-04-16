@@ -53,8 +53,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2d8ddc50-d85a-4f22-b4a2-a67bc1eee9db" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bat-1-clear.bat" beforeDir="false" afterPath="$PROJECT_DIR$/1-clear.bat" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
