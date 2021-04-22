@@ -28,7 +28,7 @@
                     <li class="item active"><a href="/"> Trang chủ </a></li>
                     <li class="item"><a href="/manage"> Quản trị </a></li>
                     <li class="item"><a href="/post"> Đăng tin </a></li>
-                    <li class="item"><a href="/signuptoken"> Đăng ký </a></li>
+                    <li class="item"><a href="/signup"> Đăng ký </a></li>
                 </ul>
             </div>
             <!--END MENU-->

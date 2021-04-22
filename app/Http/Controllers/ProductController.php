@@ -33,7 +33,7 @@ class ProductController extends FooController
               'id'  => $user->id,
               'name'  => $user->name,
                 'email' => $user->email,
-                'secret' => $this->login($user->email, '123456')
+                'secret' => $this->login($user->email, '123456789')
                 ];
         };
         return view('product.manage', ['accounts' => $accounts]);

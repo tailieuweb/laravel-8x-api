@@ -116,13 +116,6 @@
                         <input type="submit" value="Register" class="btn btn-info btn-block">
                         {!! Form::close() !!}
 
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-12 margin-top-10">
-                            {!! link_to_route('user.login', 'login') !!}
-                        </div>
-
-
-                        </div>
                     </div>
 
                 </div>
