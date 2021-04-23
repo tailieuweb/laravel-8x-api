@@ -51,7 +51,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d8ddc50-d85a-4f22-b4a2-a67bc1eee9db" name="Default Changelist" comment="" />
+    <list default="true" id="2d8ddc50-d85a-4f22-b4a2-a67bc1eee9db" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -214,12 +220,14 @@
     <property name="ASKED_MARK_IGNORED_FILES_AS_EXCLUDED" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/product" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/vendor/foostart/package-acl/resources/views/admin/mail" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\2-github\1-tailieuweb\1-laravel-8x\vendor\foostart\package-acl\resources\views\admin\mail" />
+      <recent name="E:\2-github\1-tailieuweb\1-laravel-8x\vendor\foostart\package-acl\app\Authentication\Services" />
       <recent name="E:\2-github\1-tailieuweb\1-laravel-8x\resources\views\product" />
     </key>
   </component>
@@ -240,6 +248,9 @@
       <workItem from="1611214382383" duration="5313000" />
       <workItem from="1611291397185" duration="18861000" />
       <workItem from="1615867119566" duration="1076000" />
+      <workItem from="1619064732882" duration="9767000" />
+      <workItem from="1619140675787" duration="5812000" />
+      <workItem from="1619149698293" duration="2999000" />
     </task>
     <servers />
   </component>
@@ -286,13 +297,25 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="60" y="230" width="581" height="498" key="find.popup" timestamp="1618565933345">
+    <state x="413" y="121" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1619144285698">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="60" y="230" width="581" height="498" key="find.popup/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1618565933345" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1618565927831">
+    <state x="413" y="121" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1619144285698" />
+    <state x="463" y="121" key="FileChooserDialogImpl" timestamp="1619077469530">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1618565927831" />
+    <state x="463" y="121" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1619077469530" />
+    <state x="586" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1619075413310">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="586" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1619075413310" />
+    <state x="60" y="82" width="849" height="646" key="find.popup" timestamp="1619152746392">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="60" y="82" width="849" height="646" key="find.popup/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1619152746392" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1619152714408">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1619152714408" />
   </component>
 </project>
