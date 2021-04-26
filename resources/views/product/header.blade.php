@@ -12,7 +12,7 @@
                   ">Trường Cao Đẳng Công Nghệ Thủ Đức</span>
             <p style="
     color: antiquewhite;
-">Bản tin Tuyền thông và Tư vấn tuyển sinh</p>
+">Bản tin Truyền thông và Tư vấn tuyển sinh</p>
             <!--END LOGO-->
 
             <!--BUTTON MENU-->
