@@ -482,16 +482,16 @@
         },
         {
             "name": "foostart/package-acl",
-            "version": "10.0.6",
+            "version": "10.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/foostart/package-acl.git",
-                "reference": "5d605abaec0e77d1a696488ba9c87b32e178a617"
+                "reference": "5fee82701551d48dde62345081aa6bb9ed593d61"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/foostart/package-acl/zipball/5d605abaec0e77d1a696488ba9c87b32e178a617",
-                "reference": "5d605abaec0e77d1a696488ba9c87b32e178a617",
+                "url": "https://api.github.com/repos/foostart/package-acl/zipball/5fee82701551d48dde62345081aa6bb9ed593d61",
+                "reference": "5fee82701551d48dde62345081aa6bb9ed593d61",
                 "shasum": ""
             },
             "require": {
@@ -538,13 +538,13 @@
             ],
             "support": {
                 "issues": "https://github.com/foostart/package-acl/issues",
-                "source": "https://github.com/foostart/package-acl/tree/10.0.6"
+                "source": "https://github.com/foostart/package-acl/tree/10.0.7"
             },
-            "time": "2021-04-16T01:41:18+00:00"
+            "time": "2021-04-16T04:24:44+00:00"
         },
         {
             "name": "foostart/package-category",
-            "version": "10.0.7",
+            "version": "10.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/foostart/package-category.git",
@@ -583,7 +583,7 @@
             ],
             "support": {
                 "issues": "https://github.com/foostart/package-category/issues",
-                "source": "https://github.com/foostart/package-category/tree/10.0.7"
+                "source": "https://github.com/foostart/package-category/tree/10.0.8"
             },
             "time": "2021-03-03T09:46:28+00:00"
         },
@@ -664,16 +664,16 @@
         },
         {
             "name": "foostart/package-post",
-            "version": "10.0.7",
+            "version": "10.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/foostart/package-post.git",
-                "reference": "b731e274a240d14b27568899888266830b1326be"
+                "reference": "61209fa15e13892ca689e3de76be57ccff06c290"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/foostart/package-post/zipball/b731e274a240d14b27568899888266830b1326be",
-                "reference": "b731e274a240d14b27568899888266830b1326be",
+                "url": "https://api.github.com/repos/foostart/package-post/zipball/61209fa15e13892ca689e3de76be57ccff06c290",
+                "reference": "61209fa15e13892ca689e3de76be57ccff06c290",
                 "shasum": ""
             },
             "require": {
@@ -704,9 +704,9 @@
             ],
             "support": {
                 "issues": "https://github.com/foostart/package-post/issues",
-                "source": "https://github.com/foostart/package-post/tree/10.0.7"
+                "source": "https://github.com/foostart/package-post/tree/10.0.8"
             },
-            "time": "2021-03-01T07:58:10+00:00"
+            "time": "2021-04-16T04:27:29+00:00"
         },
         {
             "name": "foostart/package-sentry",
@@ -1339,16 +1339,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v8.39.0",
+            "version": "v8.40.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "0c6f9acb55c8d1621b6f42e3dd5e242cf3b17680"
+                "reference": "a654897ad7f97aea9d7ef292803939798c4a02a4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/0c6f9acb55c8d1621b6f42e3dd5e242cf3b17680",
-                "reference": "0c6f9acb55c8d1621b6f42e3dd5e242cf3b17680",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/a654897ad7f97aea9d7ef292803939798c4a02a4",
+                "reference": "a654897ad7f97aea9d7ef292803939798c4a02a4",
                 "shasum": ""
             },
             "require": {
@@ -1503,7 +1503,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2021-04-27T14:24:05+00:00"
+            "time": "2021-04-28T14:38:56+00:00"
         },
         {
             "name": "laravel/tinker",
