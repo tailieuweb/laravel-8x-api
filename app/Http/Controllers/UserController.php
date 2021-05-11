@@ -33,16 +33,16 @@ class UserController extends Controller
             'c_password' => 'required|same:password',
         ]);
 
-//        if ($validator->fails()) {
-//            return response()->json(['error'=>$validator->errors()], 401);
-//        }
+        if ($validator->fails()) {
+            return response()->json(['error'=>$validator->errors()], 401);
+        }
 
 
         $password = $request->password;
         $input = $request->all();
         $input['password'] = bcrypt($input['password']);
-        //$user = User::create($input);
-        $user = User::find(1);
+        $user = User::create($input);
+//        $user = User::find(1);
 
         $oClient = OClient::where('password_client', 1)->first();
         return $this->getTokenAndRefreshToken($oClient, $user->email, $password);
@@ -52,7 +52,7 @@ class UserController extends Controller
         $oClient = OClient::where('password_client', 1)->first();
         $http = new Client;
 
-        $response = $http->request('POST', 'http://127.0.0.1:8000/oauth/token', [
+        $response = $http->request('POST', 'http://laravel-8x.local/oauth/token', [
             'form_params' => [
                 'grant_type' => 'password',
                 'client_id' => $oClient->id,
