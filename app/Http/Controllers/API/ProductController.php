@@ -1,13 +1,14 @@
 <?php
-   
+
 namespace App\Http\Controllers\API;
-   
+
 use Illuminate\Http\Request;
 use App\Http\Controllers\API\BaseController as BaseController;
 use App\Models\Product;
 use Validator;
 use App\Http\Resources\Product as ProductResource;
-   
+use Illuminate\Support\Facades\Auth;
+
 class ProductController extends BaseController
 {
     /**
@@ -18,7 +19,7 @@ class ProductController extends BaseController
     public function index()
     {
         $products = Product::all();
-    
+
         return $this->sendResponse(ProductResource::collection($products), 'Products retrieved successfully.');
     }
     /**
@@ -40,7 +41,7 @@ class ProductController extends BaseController
     public function store(Request $request)
     {
         $input = $request->all();
-        
+
 //        $input = [
 //            'name'   => $this->generateRandomString(),
 //            'detail' => $this->generateRandomString(100)
@@ -51,14 +52,21 @@ class ProductController extends BaseController
         ]);
 
         if($validator->fails()){
-            return $this->sendError('Validation Error.', $validator->errors());       
+            return $this->sendError('Validation Error.', $validator->errors());
         }
-   
+
+        $user = Auth::user();
+        $user_info = $this->getUser($user->id);
+
+        $input['created_user_id'] = $user->id;
+        $input['updated_user_id'] = $user->id;
+        $input['post_name'] = $input['name'];
+        $input['post_description'] = $input['detail'];
+
         $product = Product::create($input);
-   
         return $this->sendResponse(new ProductResource($product), 'Product created successfully.');
-    } 
-   
+    }
+
     /**
      * Display the specified resource.
      *
@@ -68,14 +76,14 @@ class ProductController extends BaseController
     public function show($id)
     {
         $product = Product::find($id);
-  
+
         if (is_null($product)) {
             return $this->sendError('Product not found.');
         }
-   
+
         return $this->sendResponse(new ProductResource($product), 'Product retrieved successfully.');
     }
-    
+
     /**
      * Update the specified resource in storage.
      *
@@ -90,18 +98,18 @@ class ProductController extends BaseController
             'name' => 'required',
             'detail' => 'required'
         ]);
-   
+
         if($validator->fails()){
-            return $this->sendError('Validation Error.', $validator->errors());       
+            return $this->sendError('Validation Error.', $validator->errors());
         }
-   
+
         $product->name = $input['name'];
         $product->detail = $input['detail'];
         $product->save();
-   
+
         return $this->sendResponse(new ProductResource($product), 'Product updated successfully.');
     }
-   
+
     /**
      * Remove the specified resource from storage.
      *
@@ -111,7 +119,7 @@ class ProductController extends BaseController
     public function destroy(Product $product)
     {
         $product->delete();
-   
+
         return $this->sendResponse([], 'Product deleted successfully.');
     }
 }

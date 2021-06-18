@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Foostart\Category\Helpers\FoostartCategory;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -14,6 +15,8 @@ use Validator;
 use Foostart\Category\Library\Controllers\FooController;
 use Foostart\Category\Models\Category;
 use View, Redirect, App, Config;
+
+use GuzzleHttp\Client;
 
 use Illuminate\Http\Request;
 class ProductController extends FooController
@@ -45,10 +48,35 @@ class ProductController extends FooController
     public function send(Request $request) {
         $input = $request->all();
         $input['url'] = env('SEND_URL');
-        $result = $this->curlProduct($input);
-        $data = json_decode($result);
+
+        //$result = $this->curlProduct($input);
+
+        $this->apicall($input);
+
+
         return redirect('/');
     }
+
+    public function apicall($input) {
+
+        try {
+            $http = new Client;
+            $response = $http->post($input['url'], [
+                'headers'=> [
+                    'Content-Type' => 'application/json',
+                    'Authorization' => 'Bearer  ' . $input['token']
+                ],
+                'body' => json_encode([
+                    'name' => $input['name'],
+                    'detail' => $input['detail']
+                ]),
+            ]);
+            return json_decode((string) $response->getBody(), true);
+        } catch (Exception $e) {
+            return response()->json("unauthorized", 401);
+        }
+    }
+
     public function about() {
 
     }
@@ -82,9 +110,15 @@ class ProductController extends FooController
         $params = ['id' => $level_id];
         $category = $obj_category->selectItem($params);
 
+        //
+        $user = $this->getUser($user->id);
+        $user = $user->toArray();
 
+        $category_name = $user['department'][$user['user_profile']['category_id']];
 
-        return view('product.detail', ['product' => $product, 'category' => $category->category_name]);
+        //
+
+        return view('product.detail', ['product' => $product, 'category' => $category_name]);
     }
 
     public function signuptoken(Request $request) {
@@ -94,5 +128,32 @@ class ProductController extends FooController
 
 
         return view('product.signuptoken', ['request' => $request, 'captcha' => $captcha]);
+    }
+
+    public function getUser($id = NULL) {
+
+        $authentication = \App::make('authenticator');
+        $profile_repository = \App::make('profile_repository');
+
+        $user = $authentication->getUserById($id);
+
+        $user['user_profile'] = $profile_repository->getFromUserId($user['id'])->toArray();
+        $user['department'] = $this->department();
+
+        return $user;
+    }
+
+    public function department() {
+        //Load category
+        $obj_category = new FoostartCategory();
+        $params_department = $params_level = [];
+
+        $params_department['_key'] = $obj_category->getContextKeyByRef('user/department');
+        $params_level['_key'] = $obj_category->getContextKeyByRef('user/level');
+
+        $pluck_select_category_department = $obj_category->pluckSelect($params_department);
+        $pluck_select_category_level = $obj_category->pluckSelect($params_level);
+
+        return $pluck_select_category_department;
     }
 }

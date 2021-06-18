@@ -52,11 +52,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d8ddc50-d85a-4f22-b4a2-a67bc1eee9db" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/acl_base.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/acl_base.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/product/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/product/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/oauth-private.key" beforeDir="false" afterPath="$PROJECT_DIR$/storage/oauth-private.key" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/oauth-public.key" beforeDir="false" afterPath="$PROJECT_DIR$/storage/oauth-public.key" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/BaseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/BaseController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/acl_menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/acl_menu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/product/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/product/detail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sontoken.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sontoken.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,6 +223,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1nMyiOTvRMNbn36kM146Ra0CYOW" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -229,7 +233,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/vendor/foostart/package-acl/resources/views/admin/mail" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/vendor/foostart/package-acl" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -261,6 +265,7 @@
       <workItem from="1619140675787" duration="5812000" />
       <workItem from="1619149698293" duration="2999000" />
       <workItem from="1619427204493" duration="772000" />
+      <workItem from="1623910862907" duration="8824000" />
     </task>
     <servers />
   </component>

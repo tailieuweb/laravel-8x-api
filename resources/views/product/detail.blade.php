@@ -26,9 +26,10 @@
                                 <section class="events flexslider" style="height: 458px;">
                                     <h3>Thông báo - Tin tức</h3>
 
-                                    <h4>{!! $product->post_name !!}</h4>
-                                    <h5>{!! $category !!}</h5>
-                                    <p>{!! $product->post_description !!}</p>
+                                    <h5><b> Nhóm:</b>{!! $category !!}</h5>
+                                    <h4>Tiêu đề: {!! $product->post_name !!}</h4>
+
+                                    <p>Nội dung: <br>{!! $product->post_description !!}</p>
                                 </section>
                             </div>
                         </div>
