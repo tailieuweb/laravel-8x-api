@@ -14,7 +14,7 @@
 @extends('package-acl::client.layouts.base')
 
 @section ('title')
-   Signup Token
+   Signup
 @stop
 
 @section('head_css')
@@ -28,7 +28,7 @@
             <div class="panel panel-info">
 
                 <div class="panel-heading">
-                    <h3 class="panel-title bariol-thin">Signup Token</h3>
+                    <h3 class="panel-title bariol-thin">Signup</h3>
                 </div>
 
                 <?php $message = Session::get('message'); ?>

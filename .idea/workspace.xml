@@ -51,15 +51,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d8ddc50-d85a-4f22-b4a2-a67bc1eee9db" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+    <list default="true" id="7712dc6c-050d-4c61-acb8-1b852064132d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/BaseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/BaseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/acl_menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/acl_menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/product/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/product/detail.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sontoken.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sontoken.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/product/signuptoken.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/product/signuptoken.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -233,7 +227,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/vendor/foostart/package-acl" />
+    <property name="last_opened_file_path" value="F:/5-lampart/0-php-training/2-php-core/phpunit" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -310,5 +304,8 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/1_laravel_8x@phpunit_xml.xml" NAME="phpunit.xml Coverage Results" MODIFIED="1624199013713" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
