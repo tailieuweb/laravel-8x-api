@@ -5,16 +5,16 @@ namespace App\Http\Controllers\API;
 use Illuminate\Http\Request;
 use App\Http\Controllers\API\BaseController as BaseController;
 use Validator;
-use App\Models\Blog;
-use App\Http\Resources\Blog as BlogResource;
+use App\Models\Product;
+use App\Http\Resources\Product as ProductResource;
 
-class BlogController extends BaseController
+class ProductController extends BaseController
 {
 
     public function index()
     {
-        $blogs = Blog::all();
-        return $this->sendResponse(BlogResource::collection($blogs), 'Posts fetched.');
+        $products = Product::all();
+        return $this->sendResponse(ProductResource::collection($products), 'Products fetched.');
     }
 
 
@@ -23,49 +23,66 @@ class BlogController extends BaseController
         $input = $request->all();
         $validator = Validator::make($input, [
             'title' => 'required',
-            'description' => 'required'
+            'description' => 'required',
+            'image' => 'image|mimes:jpeg,png,jpg,gif,svg'
         ]);
         if($validator->fails()){
             return $this->sendError($validator->errors());
         }
-        $blog = Blog::create($input);
-        return $this->sendResponse(new BlogResource($blog), 'Post created.');
+        if ($files = $request->file('image')) {
+            //store file into document folder
+            $imageName = time().'.'.$request->image->extension();
+            $request->image->move(public_path('upload'), $imageName);
+            $input['image'] = $imageName;
+        }
+        $product = Product::create($input);
+        return $this->sendResponse(new ProductResource($product), 'Product created.');
     }
 
 
     public function show($id)
     {
-        $blog = Blog::find($id);
-        if (is_null($blog)) {
-            return $this->sendError('Post does not exist.');
+        $product = Product::find($id);
+        if (is_null($product)) {
+            return $this->sendError('Product does not exist.');
         }
-        return $this->sendResponse(new BlogResource($blog), 'Post fetched.');
+        return $this->sendResponse(new ProductResource($product), 'Product fetched.');
     }
 
 
-    public function update(Request $request, Blog $blog)
+    public function update(Request $request, Product $product)
     {
         $input = $request->all();
 
+
         $validator = Validator::make($input, [
             'title' => 'required',
-            'description' => 'required'
+            'description' => 'required',
+            'image' => 'image|mimes:jpeg,png,jpg,gif,svg'
         ]);
 
         if($validator->fails()){
             return $this->sendError($validator->errors());
         }
 
-        $blog->title = $input['title'];
-        $blog->description = $input['description'];
-        $blog->save();
+        if ($files = $request->file('image')) {
+            //store file into document folder
+            $imageName = time().'.'.$request->image->extension();
+            $request->image->move(public_path('upload'), $imageName);
+            $input['image'] = $imageName;
+        }
+        
+        $product->title = $input['title'];
+        $product->description = $input['description'];
+        $product->image = $input['image'];
+        $product->save();
 
-        return $this->sendResponse(new BlogResource($blog), 'Post updated.');
+        return $this->sendResponse(new ProductResource($product), 'Product updated.');
     }
 
-    public function destroy(Blog $blog)
+    public function destroy(Product $product)
     {
-        $blog->delete();
-        return $this->sendResponse([], 'Post deleted.');
+        $product->delete();
+        return $this->sendResponse([], 'Product deleted.');
     }
 }

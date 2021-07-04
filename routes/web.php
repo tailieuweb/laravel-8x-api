@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\API\ProductController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,5 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    return 'api';
     return view('welcome');
 });
+Route::get('/csrf', function (Request $request) {
+    return csrf_token();
+});
+Route::resource('products', ProductController::class);
