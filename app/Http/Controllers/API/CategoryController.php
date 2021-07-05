@@ -5,16 +5,16 @@ namespace App\Http\Controllers\API;
 use Illuminate\Http\Request;
 use App\Http\Controllers\API\BaseController as BaseController;
 use Validator;
-use App\Models\Product;
-use App\Http\Resources\Product as ProductResource;
+use App\Models\Category;
+use App\Http\Resources\Category as CategoryResource;
 
-class ProductController extends BaseController
+class CategoryController extends BaseController
 {
 
     public function index()
     {
-        $products = Product::all();
-        return $this->sendResponse(ProductResource::collection($products), 'Products fetched.');
+        $categories = Category::all();
+        return $this->sendResponse(CategoryResource::collection($categories), 'Categories fetched.');
     }
 
 
@@ -35,22 +35,22 @@ class ProductController extends BaseController
             $request->image->move(public_path('upload'), $imageName);
             $input['image'] = $imageName;
         }
-        $product = Product::create($input);
-        return $this->sendResponse(new ProductResource($product), 'Product created.');
+        $category = Category::create($input);
+        return $this->sendResponse(new CategoryResource($category), 'Category created.');
     }
 
 
     public function show($id)
     {
-        $product = Product::find($id);
-        if (is_null($product)) {
-            return $this->sendError('Product does not exist.');
+        $category = Category::find($id);
+        if (is_null($category)) {
+            return $this->sendError('Category does not exist.');
         }
-        return $this->sendResponse(new ProductResource($product), 'Product fetched.');
+        return $this->sendResponse(new CategoryResource($category), 'Category fetched.');
     }
 
 
-    public function update(Request $request, Product $product)
+    public function update(Request $request, Category $category)
     {
         $input = $request->all();
 
@@ -70,20 +70,20 @@ class ProductController extends BaseController
             $imageName = time().'.'.$request->image->extension();
             $request->image->move(public_path('upload'), $imageName);
             $input['image'] = $imageName;
-            $product->image = $input['image'];
+            $category->image = $input['image'];
         }
 
-        $product->title = $input['title'];
-        $product->description = $input['description'];
+        $category->title = $input['title'];
+        $category->description = $input['description'];
 
-        $product->save();
+        $category->save();
 
-        return $this->sendResponse(new ProductResource($product), 'Product updated.');
+        return $this->sendResponse(new CategoryResource($category), 'Category updated.');
     }
 
-    public function destroy(Product $product)
+    public function destroy(Category $category)
     {
-        $product->delete();
-        return $this->sendResponse([], 'Product deleted.');
+        $category->delete();
+        return $this->sendResponse([], 'Category deleted.');
     }
 }

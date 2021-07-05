@@ -6,564 +6,1132 @@
 	},
 	"item": [
 		{
-			"name": "1-auth",
+			"name": "1-product",
 			"item": [
 				{
-					"name": "1-register",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "name",
-									"value": "11",
-									"type": "text"
+					"name": "1-auth",
+					"item": [
+						{
+							"name": "1-register",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "11",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "11@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "11",
+											"type": "text"
+										},
+										{
+											"key": "confirm_password",
+											"value": "11",
+											"type": "text"
+										}
+									]
 								},
-								{
-									"key": "email",
-									"value": "11@gmail.com",
-									"type": "text"
-								},
-								{
-									"key": "password",
-									"value": "11",
-									"type": "text"
-								},
-								{
-									"key": "confirm_password",
-									"value": "11",
-									"type": "text"
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/register",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"register"
+									]
 								}
-							]
+							},
+							"response": []
 						},
-						"url": {
-							"raw": "http://127.0.0.1:8000/api/register",
-							"protocol": "http",
-							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"register"
-							]
+						{
+							"name": "2-login-OK",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "11@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "11",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/login",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "3-create-product",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {}
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "2|AWLd7menxqKCEh95ZzMWu1yKD32W7OEjDATU0zL9",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "blog1",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "blog1",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/D:/1-github-workspace/1-tailieuweb/demo/images/how_to_watch_euro_2021_thumb1200_4-3.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/products",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "4-get-product",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "2|AWLd7menxqKCEh95ZzMWu1yKD32W7OEjDATU0zL9",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/products/2",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"products",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "5-get-all",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "2|AWLd7menxqKCEh95ZzMWu1yKD32W7OEjDATU0zL9",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/products",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "6-update-product",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "2|AWLd7menxqKCEh95ZzMWu1yKD32W7OEjDATU0zL9",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "blog11",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "blog11",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/D:/1-github-workspace/1-tailieuweb/demo/images/anh-tin-euro-scotland-va-slovakia-ao-sang-1-16050173859881361020551.jpg"
+										},
+										{
+											"key": "_method",
+											"value": "PUT",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/products/2",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"products",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "7-delete-product",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "2|AWLd7menxqKCEh95ZzMWu1yKD32W7OEjDATU0zL9",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/products/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"products",
+										"1"
+									]
+								}
+							},
+							"response": []
 						}
-					},
-					"response": []
+					]
 				},
 				{
-					"name": "2-login-OK",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "email",
-									"value": "11@gmail.com",
-									"type": "text"
+					"name": "2-noauth",
+					"item": [
+						{
+							"name": "2-csrf",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/csrf",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"csrf"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "3-create-product",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-CSRF-TOKEN",
+										"value": "Mk7wCV3kqWGtYktkRpEyyELeswBvNybKhxBarg8y",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "blog1",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "blog1",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/D:/1-github-workspace/1-tailieuweb/demo/images/anh-tin-euro-scotland-va-slovakia-ao-sang-1-16050173859881361020551.jpg"
+										}
+									]
 								},
-								{
-									"key": "password",
-									"value": "11",
-									"type": "text"
+								"url": {
+									"raw": "http://127.0.0.1:8000/products",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"products"
+									]
 								}
-							]
+							},
+							"response": []
 						},
-						"url": {
-							"raw": "http://127.0.0.1:8000/api/login",
-							"protocol": "http",
-							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"login"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "3-create-product",
-					"protocolProfileBehavior": {
-						"disabledSystemHeaders": {}
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "2|AWLd7menxqKCEh95ZzMWu1yKD32W7OEjDATU0zL9",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "title",
-									"value": "blog1",
-									"type": "text"
+						{
+							"name": "4-get-product",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "5|Ez7Y3UZxxGM5Z2ewIazd8jz40gzHSQOjfjbXa8wi",
+											"type": "string"
+										}
+									]
 								},
-								{
-									"key": "description",
-									"value": "blog1",
-									"type": "text"
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-CSRF-TOKEN",
+										"value": "48w5Oy2DmAM3H3mz9ol3cV4aeM9T7wRU7sLoqhIe",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/products/2",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"products",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "5-get-all",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-CSRF-TOKEN",
+										"value": "48w5Oy2DmAM3H3mz9ol3cV4aeM9T7wRU7sLoqhIe",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/products",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "6-update-product",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-CSRF-TOKEN",
+										"value": "wV2IGr9DXm7eVPcCue9gWlCPepeSEvE483NIBJZq",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/D:/1-github-workspace/1-tailieuweb/demo/images/anh-tin-euro-scotland-va-slovakia-ao-sang-1-16050173859881361020551.jpg"
+										},
+										{
+											"key": "title",
+											"value": "blog11",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "blog11111",
+											"type": "text"
+										}
+									]
 								},
-								{
-									"key": "image",
-									"type": "file",
-									"src": "/D:/1-github-workspace/1-tailieuweb/demo/images/how_to_watch_euro_2021_thumb1200_4-3.jpg"
+								"url": {
+									"raw": "http://127.0.0.1:8000/products/2",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"products",
+										"2"
+									]
 								}
-							]
+							},
+							"response": []
 						},
-						"url": {
-							"raw": "http://127.0.0.1:8000/api/products",
-							"protocol": "http",
-							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"products"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "4-get-product",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "2|AWLd7menxqKCEh95ZzMWu1yKD32W7OEjDATU0zL9",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "http://127.0.0.1:8000/api/products/2",
-							"protocol": "http",
-							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"products",
-								"2"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "5-get-all",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "2|AWLd7menxqKCEh95ZzMWu1yKD32W7OEjDATU0zL9",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "http://127.0.0.1:8000/api/products",
-							"protocol": "http",
-							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"products"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "6-update-product",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "2|AWLd7menxqKCEh95ZzMWu1yKD32W7OEjDATU0zL9",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "title",
-									"value": "blog11",
-									"type": "text"
+						{
+							"name": "7-delete-product",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
 								},
-								{
-									"key": "description",
-									"value": "blog11",
-									"type": "text"
-								},
-								{
-									"key": "image",
-									"type": "file",
-									"src": "/D:/1-github-workspace/1-tailieuweb/demo/images/anh-tin-euro-scotland-va-slovakia-ao-sang-1-16050173859881361020551.jpg"
-								},
-								{
-									"key": "_method",
-									"value": "PUT",
-									"type": "text"
+								"url": {
+									"raw": "http://localhost:8000/products/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"products",
+										"4"
+									]
 								}
-							]
-						},
-						"url": {
-							"raw": "http://127.0.0.1:8000/api/products/2",
-							"protocol": "http",
-							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"products",
-								"2"
-							]
+							},
+							"response": []
 						}
-					},
-					"response": []
-				},
-				{
-					"name": "7-delete-product",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "2|AWLd7menxqKCEh95ZzMWu1yKD32W7OEjDATU0zL9",
-									"type": "string"
-								}
-							]
-						},
-						"method": "DELETE",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "http://localhost:8000/api/products/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"products",
-								"1"
-							]
-						}
-					},
-					"response": []
+					]
 				}
 			]
 		},
 		{
-			"name": "2-noauth",
+			"name": "2-category",
 			"item": [
 				{
-					"name": "2-csrf",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://127.0.0.1:8000/csrf",
-							"protocol": "http",
-							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
-							],
-							"port": "8000",
-							"path": [
-								"csrf"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "3-create-product",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "X-CSRF-TOKEN",
-								"value": "Mk7wCV3kqWGtYktkRpEyyELeswBvNybKhxBarg8y",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "title",
-									"value": "blog1",
-									"type": "text"
+					"name": "1-auth",
+					"item": [
+						{
+							"name": "1-register",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "11",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "11@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "11",
+											"type": "text"
+										},
+										{
+											"key": "confirm_password",
+											"value": "11",
+											"type": "text"
+										}
+									]
 								},
-								{
-									"key": "description",
-									"value": "blog1",
-									"type": "text"
-								},
-								{
-									"key": "image",
-									"type": "file",
-									"src": "/D:/1-github-workspace/1-tailieuweb/demo/images/anh-tin-euro-scotland-va-slovakia-ao-sang-1-16050173859881361020551.jpg"
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/register",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"register"
+									]
 								}
-							]
-						},
-						"url": {
-							"raw": "http://127.0.0.1:8000/products",
-							"protocol": "http",
-							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
-							],
-							"port": "8000",
-							"path": [
-								"products"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "4-get-product",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "5|Ez7Y3UZxxGM5Z2ewIazd8jz40gzHSQOjfjbXa8wi",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [
-							{
-								"key": "X-CSRF-TOKEN",
-								"value": "48w5Oy2DmAM3H3mz9ol3cV4aeM9T7wRU7sLoqhIe",
-								"type": "text",
-								"disabled": true
-							}
-						],
-						"url": {
-							"raw": "http://127.0.0.1:8000/products/2",
-							"protocol": "http",
-							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
-							],
-							"port": "8000",
-							"path": [
-								"products",
-								"2"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "5-get-all",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "X-CSRF-TOKEN",
-								"value": "48w5Oy2DmAM3H3mz9ol3cV4aeM9T7wRU7sLoqhIe",
-								"type": "text",
-								"disabled": true
-							}
-						],
-						"url": {
-							"raw": "http://127.0.0.1:8000/products",
-							"protocol": "http",
-							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
-							],
-							"port": "8000",
-							"path": [
-								"products"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "6-update-product",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "X-CSRF-TOKEN",
-								"value": "wV2IGr9DXm7eVPcCue9gWlCPepeSEvE483NIBJZq",
-								"type": "text",
-								"disabled": true
 							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "image",
-									"type": "file",
-									"src": "/D:/1-github-workspace/1-tailieuweb/demo/images/anh-tin-euro-scotland-va-slovakia-ao-sang-1-16050173859881361020551.jpg"
-								},
-								{
-									"key": "title",
-									"value": "blog11",
-									"type": "text"
-								},
-								{
-									"key": "description",
-									"value": "blog11111",
-									"type": "text"
-								},
-								{
-									"key": "_method",
-									"value": "PUT",
-									"type": "text"
-								}
-							]
+							"response": []
 						},
-						"url": {
-							"raw": "http://127.0.0.1:8000/products/2",
-							"protocol": "http",
-							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
-							],
-							"port": "8000",
-							"path": [
-								"products",
-								"2"
-							]
+						{
+							"name": "2-login-OK",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "11@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "11",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/login",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "3-create-category",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {}
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "1|Om68pnOHmfgG0J34Nkh8iR6CtqpQfa7e1XXnBuWP",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "blog1",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "blog1",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/D:/1-github-workspace/1-tailieuweb/demo/images/how_to_watch_euro_2021_thumb1200_4-3.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/categories",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"categories"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "4-get-category",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "2|AWLd7menxqKCEh95ZzMWu1yKD32W7OEjDATU0zL9",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/categories/2",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"categories",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "5-get-all",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "2|AWLd7menxqKCEh95ZzMWu1yKD32W7OEjDATU0zL9",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/categories",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"categories"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "6-update-category",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "2|AWLd7menxqKCEh95ZzMWu1yKD32W7OEjDATU0zL9",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "blog11",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "blog11",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/D:/1-github-workspace/1-tailieuweb/demo/images/anh-tin-euro-scotland-va-slovakia-ao-sang-1-16050173859881361020551.jpg"
+										},
+										{
+											"key": "_method",
+											"value": "PUT",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/categories/2",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"categories",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "7-delete-category",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "2|AWLd7menxqKCEh95ZzMWu1yKD32W7OEjDATU0zL9",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/categories/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"categories",
+										"1"
+									]
+								}
+							},
+							"response": []
 						}
-					},
-					"response": []
+					]
 				},
 				{
-					"name": "7-delete-product",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": []
+					"name": "2-noauth",
+					"item": [
+						{
+							"name": "2-csrf",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/csrf",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"csrf"
+									]
+								}
+							},
+							"response": []
 						},
-						"url": {
-							"raw": "http://localhost:8000/products/4",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8000",
-							"path": [
-								"products",
-								"4"
-							]
+						{
+							"name": "3-create-category",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-CSRF-TOKEN",
+										"value": "Mk7wCV3kqWGtYktkRpEyyELeswBvNybKhxBarg8y",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "blog1",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "blog1",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/D:/1-github-workspace/1-tailieuweb/demo/images/anh-tin-euro-scotland-va-slovakia-ao-sang-1-16050173859881361020551.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/categories",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"categories"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "4-get-category",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "5|Ez7Y3UZxxGM5Z2ewIazd8jz40gzHSQOjfjbXa8wi",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-CSRF-TOKEN",
+										"value": "48w5Oy2DmAM3H3mz9ol3cV4aeM9T7wRU7sLoqhIe",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/categories/2",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"categories",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "5-get-all",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-CSRF-TOKEN",
+										"value": "48w5Oy2DmAM3H3mz9ol3cV4aeM9T7wRU7sLoqhIe",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/categories",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"categories"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "6-update-category",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-CSRF-TOKEN",
+										"value": "wV2IGr9DXm7eVPcCue9gWlCPepeSEvE483NIBJZq",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/D:/1-github-workspace/1-tailieuweb/demo/images/anh-tin-euro-scotland-va-slovakia-ao-sang-1-16050173859881361020551.jpg"
+										},
+										{
+											"key": "title",
+											"value": "blog11",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "blog11111",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/categories/2",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"categories",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "7-delete-category",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "http://localhost:8000/categories/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"categories",
+										"4"
+									]
+								}
+							},
+							"response": []
 						}
-					},
-					"response": []
+					]
 				}
 			]
 		}
