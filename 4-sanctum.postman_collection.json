@@ -96,19 +96,28 @@
 				},
 				{
 					"name": "3-create-product",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
 					"request": {
 						"auth": {
 							"type": "bearer",
 							"bearer": [
 								{
 									"key": "token",
-									"value": "1|PB4FnA2VPQS8R21oN2qvg6hmXt2cPpd1R9xntV1N",
+									"value": "2|AWLd7menxqKCEh95ZzMWu1yKD32W7OEjDATU0zL9",
 									"type": "string"
 								}
 							]
 						},
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "formdata",
 							"formdata": [
@@ -121,6 +130,11 @@
 									"key": "description",
 									"value": "blog1",
 									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/D:/1-github-workspace/1-tailieuweb/demo/images/how_to_watch_euro_2021_thumb1200_4-3.jpg"
 								}
 							]
 						},
@@ -150,13 +164,19 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "1|PB4FnA2VPQS8R21oN2qvg6hmXt2cPpd1R9xntV1N",
+									"value": "2|AWLd7menxqKCEh95ZzMWu1yKD32W7OEjDATU0zL9",
 									"type": "string"
 								}
 							]
 						},
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "http://127.0.0.1:8000/api/products/2",
 							"protocol": "http",
@@ -184,13 +204,19 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "1|PB4FnA2VPQS8R21oN2qvg6hmXt2cPpd1R9xntV1N",
+									"value": "2|AWLd7menxqKCEh95ZzMWu1yKD32W7OEjDATU0zL9",
 									"type": "string"
 								}
 							]
 						},
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "http://127.0.0.1:8000/api/products",
 							"protocol": "http",
@@ -217,13 +243,19 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "1|PB4FnA2VPQS8R21oN2qvg6hmXt2cPpd1R9xntV1N",
+									"value": "2|AWLd7menxqKCEh95ZzMWu1yKD32W7OEjDATU0zL9",
 									"type": "string"
 								}
 							]
 						},
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "formdata",
 							"formdata": [
@@ -276,13 +308,19 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "5|Ez7Y3UZxxGM5Z2ewIazd8jz40gzHSQOjfjbXa8wi",
+									"value": "2|AWLd7menxqKCEh95ZzMWu1yKD32W7OEjDATU0zL9",
 									"type": "string"
 								}
 							]
 						},
 						"method": "DELETE",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "http://localhost:8000/api/products/1",
 							"protocol": "http",
@@ -333,7 +371,7 @@
 						"header": [
 							{
 								"key": "X-CSRF-TOKEN",
-								"value": "wV2IGr9DXm7eVPcCue9gWlCPepeSEvE483NIBJZq",
+								"value": "Mk7wCV3kqWGtYktkRpEyyELeswBvNybKhxBarg8y",
 								"type": "text"
 							}
 						],
@@ -446,11 +484,17 @@
 				{
 					"name": "6-update-product",
 					"request": {
-						"method": "PUT",
+						"method": "POST",
 						"header": [
 							{
 								"key": "X-CSRF-TOKEN",
 								"value": "wV2IGr9DXm7eVPcCue9gWlCPepeSEvE483NIBJZq",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
 								"type": "text"
 							}
 						],
@@ -469,7 +513,12 @@
 								},
 								{
 									"key": "description",
-									"value": "blog11",
+									"value": "blog11111",
+									"type": "text"
+								},
+								{
+									"key": "_method",
+									"value": "PUT",
 									"type": "text"
 								}
 							]
