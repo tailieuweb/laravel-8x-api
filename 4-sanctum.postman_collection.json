@@ -495,36 +495,14 @@
 				{
 					"name": "7-delete-product",
 					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "5|Ez7Y3UZxxGM5Z2ewIazd8jz40gzHSQOjfjbXa8wi",
-									"type": "string"
-								}
-							]
-						},
 						"method": "DELETE",
-						"header": [
-							{
-								"key": "X-CSRF-TOKEN",
-								"value": "pn7rdL5pQ0zS3NWYniriu86ci7tQNc17wFuSmzoV",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"body": {
 							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "_token",
-									"value": "48w5Oy2DmAM3H3mz9ol3cV4aeM9T7wRU7sLoqhIe",
-									"type": "text"
-								}
-							]
+							"formdata": []
 						},
 						"url": {
-							"raw": "http://localhost:8000/products/1",
+							"raw": "http://localhost:8000/products/4",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -532,7 +510,7 @@
 							"port": "8000",
 							"path": [
 								"products",
-								"1"
+								"4"
 							]
 						}
 					},
