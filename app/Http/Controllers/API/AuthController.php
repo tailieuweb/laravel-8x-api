@@ -9,6 +9,13 @@ use App\Models\User;
 class AuthController extends BaseController
 {
 
+    public function logout(Request $request) {
+        $authUser = $request->user()->tokens()->delete();
+        return [
+            'message' => 'Logged out'
+        ];
+    }
+
     public function signin(Request $request)
     {
         if(Auth::attempt(['email' => $request->email, 'password' => $request->password])){
