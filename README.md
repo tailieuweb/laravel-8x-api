@@ -59,3 +59,15 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+Access Key ID:
+AKIA4DVDMMUUQCMAY4F3
+Secret Access Key:
+xc8Z87a7I7YcVOnVhSgjyQe6V8AN8WpbTXH+nqhV
+
+
+Access Key ID:
+AKIA4DVDMMUUV7STGN47
+Secret Access Key:
+GeZXj5y/oTm4ITCfjsEfWb6dNi/1leHNIMLUFb6k
